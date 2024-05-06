@@ -1,0 +1,7 @@
+# https://git-scm.com/docs/gitignore
+
+/.venv/
+/viblib/
+/src/.ipynb_checkpoints/
+/src/__pycache__/
+/src/local_tests/
