@@ -12,3 +12,8 @@ Dieser Konverter wurde für die [VibViz - Datenbank](https://github.com/derikon/
 - [ ] Frequenz erkennen
 - [ ] Amplituden erkennen
 - [ ] Estellung hlabs.json
+
+# Optionale Meilensteine
+
+- [ ] Signalform erkennen
+- [ ] Fading
