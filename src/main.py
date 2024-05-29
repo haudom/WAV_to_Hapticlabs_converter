@@ -50,8 +50,11 @@ def lowPassFilter(audio_arr, sr):
 def findBreaks(audio_arr):
   index = -1
 
-  minBreakTime = 100 # in samples
-  toleranz = 0.007
+# Einstellbare Parameter
+  minBreakTime = sr / 20 #in samples #eine Pause muss mindestens eine 20 hz Periode lang sein
+  toleranz = 0.007 # Amplituden toleranz zwischen 0 und 1 (welsche Werte werden nicht berücksichtigt/als Pause bewertet)
+##
+
   breaksList = []
 
   for i, value in enumerate(audio_arr):
@@ -136,18 +139,191 @@ def splitAudioArrAtBreaks(audio_arr, breaksList):
 
   
   return audio_blocks
+
+##############################################################################
+# Vereinfachen von Graphen zu linearen Darstellungen
+# Parameter: data: Daten welche verifacht werden [Zeitpunkte, Werte]/ [x,y], window_size: "Auflösung" der vereinfachung (Je größer desto gröber die Vereinfachung)
+#            time_tolerance: Zeitwerte innherhalb werden zu einem Zeitwert zusammengefasst
+#            value_tolerance: Aufeinanderfolgende Werte innerhalb der Toleranz werden als horizontale Gerade interpretiert/ zusammengefasst.
 ###############################################################################
+##TODO Punkte entfernen wenn min und max am rand der Zeitspanne liegen
+def linearApproximation(data, value_tolerance, window_size, time_tolerance = None):
+
+  if time_tolerance is None:
+    time_tolerance = window_size/2
+  linePoints = []
+  
+  pos = 0
+  window = data[:window_size]
+  data = data[window_size-1:]
+  
+  print("window: ", window)
+
+  lastMinOnWindowEdge : bool = False #bei letzten Durchgang war das min am rand des Fensters
+  lasMaxOnWindowEdge : bool = False #bei letzten durchgang war das max am rand des Fensters
+  LastMinFirst : bool = False #beim letzten durchgang war das min vor dem max
+
+  # Berechnen der Minimal- und Maximalwerte im Fenster
+  while len(data) > 0:
+
+    WindowValues = [row[1] for row in window]
+    max = numpy.nanmax(WindowValues)
+    maxPos = WindowValues.index(max)
+    min = numpy.nanmin(WindowValues)
+    minPos = WindowValues.index(min)
+
+    print("min: ", min, "max: ", max, "minPos: ", minPos, "maxPos: ", maxPos)
+
+  ## Punkte am Rand der Fenster entfernen, wenn die Grade im Fenster weitergeführt wird.
+    if pos > 0:
+      if lasMaxOnWindowEdge:
+        if minPos == 0:
+         linePoints.pop(-1)
+         min = None
+        elif maxPos < minPos:
+          linePoints.pop(-1)
+
+      elif lastMinOnWindowEdge:
+        if maxPos == 0:
+          linePoints.pop(-1)
+          max = None
+        elif minPos < maxPos == 0:
+          linePoints.pop(-1)
+
+      elif LastMinFirst and maxPos == 0:
+        max = None
+      elif not LastMinFirst and minPos == 0:
+        min = None
+
+    print("min: ", min, "max: ", max, "minPos: ", minPos, "maxPos: ", maxPos)
+
+    lastMinOnWindowEdge = False #bei letzten Durchgang war das min am rand des Fensters
+    lasMaxOnWindowEdge = False #bei letzten durchgang war das max am rand des Fensters
+    LastMinFirst = False #beim letzten durchgang war das min vor dem max
+
+    if minPos == len(window) - 1:
+      lastMinOnWindowEdge = True
+    if maxPos == len(window) - 1:
+      lasMaxOnWindowEdge = True
+
+    if maxPos > minPos:
+      LastMinFirst = True
+      if min is not None:
+        linePoints.append(window[minPos])
+      if max is not None:
+        linePoints.append(window[maxPos])
+    if minPos >= maxPos:
+      LastMinFirst = False
+      if max is not None:
+        linePoints.append(window[maxPos])
+      if min is not None:
+        linePoints.append(window[minPos])
+
+    #Fenster weiterschieben
+    pos += len(window)-1
+    window = data[:window_size]
+    data = data[window_size-1:]
+    print("pos",pos,"windows",window)
+    print("linePoints",linePoints)
+
+  #Zeittoleranz anwenden
+  linePoints = applyTolerance(linePoints, 0, time_tolerance)
+  #Werttoleranz anwenden
+  linePoints = applyTolerance(linePoints, 1, value_tolerance)
+
+  #Durch Verschiebung entstandene gleiche Punkt entfernen
+  deleteDuplicatedPoints(linePoints)
+
+  return linePoints
+
+#entfernt mehrfach vorkommende Punkte (wenn diese in der Liste nebeinander liegen)
+def deleteDuplicatedPoints(linePoints):
+  i = 1
+  while i < len(linePoints):
+    try:
+     
+     while linePoints[i][0] == linePoints[i-1][0] and linePoints[i][1] == linePoints[i-1][1]:
+      linePoints.pop(i)
+
+    except IndexError:
+      break
+    i+=1
+
+#Verschiebt Punkte welche innerhlab der Tolleranz liegen zu einem gemeinsamen durchschnitt.
+#Entfernt Punkte, welche durch die Verschiebeung auf bzw. in einer Geraden liegen, welche von zwei außenpunkten aufgespannt wird.
+def applyTolerance(list, index, tolerance):
+  referenceValue = 0
+  outList = []
+  for i in range(1,len(list)):
+    if abs(list[referenceValue][index] - list[i][index]) > tolerance:
+      if i > referenceValue + 1:
+        mean = numpy.mean([row[index] for row in list[referenceValue:i-1]])
+        outList.append(list[referenceValue])
+        outList[-1][index] = mean
+        outList.append(list[i-1])
+        outList[-1][index] = mean
+      else:
+        outList.append(list[referenceValue])
+
+      referenceValue = i
+
+  if referenceValue == len(list) - 1:
+    outList.append(list[referenceValue])
+  else:
+    mean =  numpy.mean([row[index] for row in list[referenceValue:]])
+    outList.append(list[referenceValue])
+    outList[-1][index] = mean
+    outList.append(list[-1])
+    outList[-1][index] = mean
+  return outList
+  
+  
+  
 
 
 
-#audio_arr, sr = openFile(r"viblib\v-09-11-3-8.wav")
-#breaks_list = findBreaks(audio_arr=audio_arr)
-#audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
+###############################################################################
+# Berechnet harmonische Grundfrequenz
+###############################################################################
+def getFrequency(audio_arr, sr):
+  # anfangsbedingungen
+  if audio_arr is None: return
+  if len(audio_arr) <= 0: return #Leres Array ignorieren
 
-#for audio in audio_arr_list:
-#  findBlocksbyAmplitude(audio,sr=sr)
+  # FFT berechnen
+  fft_result = scipy.fft.fft(audio_arr)
+  frequencies = scipy.fft.fftfreq(len(fft_result), d=1/sr)
+
+  # Verwende librosa.pyin zur Bestimmung der Grundfrequenz
+  f0, voiced_flag, voiced_probs = librosa.pyin(audio_arr, fmin=20, fmax=500, sr=sr,frame_length=len(audio_arr))
+  #durchschnittliche Grundfrequenz
+  mean_f0 = numpy.mean(f0[~numpy.isnan(f0)])
+  print(mean_f0)
+  print(f0)
+  if PLOT_INTERMIN_RESULTS:
+    global fig
+    plt.figure(fig)
+    plt.axvline(x=mean_f0, color="red")
+    plt.plot(frequencies[:len(frequencies)//2],abs(fft_result[:len(fft_result)//2]))
+
+    fig += 1
+  return frequencies
+
+# audio_arr, sr = openFile(r"viblib\v-09-18-2-7.wav")
+# print("sample rate: ", sr)
+# breaks_list = findBreaks(audio_arr=audio_arr)
+# audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
+
+# for audio in audio_arr_list:
+#   getFrequency(audio_arr=audio, sr=sr)
 
 
 
+# plt.show()
+list = [[1,0],[2,90],[3,85],[4,80],[5,70],[6,60],[7,50],[8,40],[9,50],[10,60],[11,70],[12,80],[13,90],[14,100],[15,1],[16,40],[17,30],[18,40],[19,60]]
 
-#plt.show()
+print(linearApproximation(list,10,5,1))
+test = [row[1] for row in list]
+max = numpy.nanmax(test)
+print(test.index(max))
+print(test)
