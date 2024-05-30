@@ -147,24 +147,46 @@ def splitAudioArrAtBreaks(audio_arr, breaksList):
 #            value_tolerance: Aufeinanderfolgende Werte innerhalb der Toleranz werden als horizontale Gerade interpretiert/ zusammengefasst.
 ###############################################################################
 
-def linearApproximation(data, value_tolerance, window_size, time_tolerance = None):
+def linearApproximation(data, value_tolerance, window_size, time_tolerance = None, fig = None):
+
+  if not data: return
 
   if time_tolerance is None:
     time_tolerance = window_size/2
   linePoints = []
   
-  pos = 0
-  window = data[:window_size]
-  data = data[window_size-1:]
-  
-  print("window: ", window)
 
+  pos = 0
+
+  linePoints.append(data[0]) #Erster Punkt wrid immer hinzugefügt
   lastMinOnWindowEdge : bool = False #bei letzten Durchgang war das min am rand des Fensters
   lasMaxOnWindowEdge : bool = False #bei letzten durchgang war das max am rand des Fensters
   LastMinFirst : bool = False #beim letzten durchgang war das min vor dem max
 
+
+
   # Berechnen der Minimal- und Maximalwerte im Fenster
-  while len(data) > 0:
+  while data:
+    
+    #Fenster schieben
+    windowlength = 0
+    for i in range(len(data)):
+      if data[i][0] >= pos + window_size:
+        windowlength = i
+        break
+    if windowlength == 1:
+      windowlength = 2
+      
+    if windowlength == 0:
+      window = data
+      data = []
+    else:
+      window = data[:windowlength]
+      data = data[windowlength-1:]
+
+    print("windows:",window)
+    plt.vlines(x=window[0][0], ymin=-1, ymax=1, color="red")
+    plt.vlines(x=window[-1][0], ymin=-1, ymax=1, color="red")
 
     WindowValues = [row[1] for row in window]
     max = numpy.nanmax(WindowValues)
@@ -219,13 +241,22 @@ def linearApproximation(data, value_tolerance, window_size, time_tolerance = Non
       if min is not None:
         linePoints.append(window[minPos])
 
-    #Fenster weiterschieben
-    pos += len(window)-1
-    window = data[:window_size]
-    data = data[window_size-1:]
-    print("pos",pos,"windows",window)
-    print("linePoints",linePoints)
+    
+    pos = window[-1][0] # pos auf Zeitposition / x Position der abgearbeiteten Daten setzen
 
+
+
+
+    #print("pos:",pos,"window:",window)
+    #print("linePoints:",linePoints)
+
+    if not data:
+      linePoints.append(window[-1]) #letzter Punkt der Daten wird immer hinzugefügt
+
+    print("linePoints: ", linePoints)
+
+
+  print("linePoints: ", linePoints)
   #Zeittoleranz anwenden
   linePoints = applyTolerance(linePoints, 0, time_tolerance)
   #Werttoleranz anwenden
@@ -233,6 +264,19 @@ def linearApproximation(data, value_tolerance, window_size, time_tolerance = Non
 
   #Durch Verschiebung entstandene gleiche Punkt entfernen
   deleteDuplicatedPoints(linePoints)
+  
+  if len(linePoints) >= 3:
+    deleteIndexes = []
+    for i in range(1,len(linePoints)-1):
+      if linePoints[i][1] > linePoints[i-1][1] and linePoints[i][1] < linePoints[i+1][1]:
+        deleteIndexes.append(i)
+      if linePoints[i][1] < linePoints[i-1][1] and linePoints[i][1] > linePoints[i+1][1]:
+        deleteIndexes.append(i)
+    for i in reversed(deleteIndexes):
+      linePoints.pop(i)
+
+
+
 
   return linePoints
 
@@ -363,21 +407,24 @@ def getAmplitudes(audio_arr):
     index = splitValues.index(amplitude)
     amplitudes.append([absSplit[index][0],amplitude])
 
-  #amplitudes = linearApproximation(amplitudes, 0.2, 500, 200)
+  
 
 
   if PLOT_INTERMIN_RESULTS:
     global fig
     plt.figure(fig)
     plt.plot(audio_arr)
-    plt.plot([row[0] for row in amplitudes], [row[1] for row in amplitudes])
+
+    amplitudes = linearApproximation(amplitudes, 0.2, sr/2, sr/4, fig)
+    if amplitudes:
+      plt.plot([row[0] for row in amplitudes], [row[1] for row in amplitudes],'-o')
     fig += 1
   return amplitudes
 
 
 
 
-audio_arr, sr = openFile(r"viblib\v-09-23-6-24.wav")
+audio_arr, sr = openFile(r"viblib\v-10-28-7-29.wav")
 print("sample rate: ", sr)
 breaks_list = findBreaks(audio_arr=audio_arr)
 audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
