@@ -146,7 +146,7 @@ def splitAudioArrAtBreaks(audio_arr, breaksList):
 #            time_tolerance: Zeitwerte innherhalb werden zu einem Zeitwert zusammengefasst
 #            value_tolerance: Aufeinanderfolgende Werte innerhalb der Toleranz werden als horizontale Gerade interpretiert/ zusammengefasst.
 ###############################################################################
-##TODO Punkte entfernen wenn min und max am rand der Zeitspanne liegen
+
 def linearApproximation(data, value_tolerance, window_size, time_tolerance = None):
 
   if time_tolerance is None:
@@ -277,8 +277,31 @@ def applyTolerance(list, index, tolerance):
     outList[-1][index] = mean
   return outList
   
-  
-  
+
+###############################################################################
+# Split
+###############################################################################
+  """
+  Splits a list into sublists based on a given value.
+
+  Args:
+      lst (list): The list to be split.
+      value: The value to split the list at.
+
+  Returns:
+      list: A list of sublists, where each sublist contains elements from the original list that are not equal to the given value.
+  """
+def splitListAtValueCrossing(lst, value):
+  result = []
+  temp = []
+  for i in range(len(lst)-1):
+    if lst[i] >= value and lst[i+1] < value or lst[i] <= value and lst[i+1] > value:
+      if temp:
+        result.append(temp)
+      temp = []
+    else:
+      temp.append(lst[i])
+  return result
 
 
 
@@ -309,21 +332,67 @@ def getFrequency(audio_arr, sr):
     fig += 1
   return frequencies
 
-# audio_arr, sr = openFile(r"viblib\v-09-18-2-7.wav")
-# print("sample rate: ", sr)
-# breaks_list = findBreaks(audio_arr=audio_arr)
-# audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
+###############################################################################
+# Amplituden erkennung
+###############################################################################
 
-# for audio in audio_arr_list:
-#   getFrequency(audio_arr=audio, sr=sr)
+def getAmplitudes(audio_arr):
+  amplitudes = []
+  splits = splitListAtValueCrossing(audio_arr, 0)
 
+  #Betrag des Signals berechnen
+  splits = [numpy.abs(split) for split in splits]
+
+
+  #Zeiten hinzufügen (Samples seit beginn)
+  counter = 0
+  temp = []
+  timeAbsValueSplits = []	
+  for split in splits:
+    for value in split:
+      temp.append([counter,value])
+      counter += 1
+    if temp:
+      timeAbsValueSplits.append(temp)
+      temp = []
+
+  #Amplituden finden
+  for absSplit in timeAbsValueSplits:
+    splitValues = [row[1] for row in absSplit]
+    amplitude = numpy.max(splitValues)
+    index = splitValues.index(amplitude)
+    amplitudes.append([absSplit[index][0],amplitude])
+
+  #amplitudes = linearApproximation(amplitudes, 0.2, 500, 200)
+
+
+  if PLOT_INTERMIN_RESULTS:
+    global fig
+    plt.figure(fig)
+    plt.plot(audio_arr)
+    plt.plot([row[0] for row in amplitudes], [row[1] for row in amplitudes])
+    fig += 1
+  return amplitudes
+
+
+
+
+audio_arr, sr = openFile(r"viblib\v-09-23-6-24.wav")
+print("sample rate: ", sr)
+breaks_list = findBreaks(audio_arr=audio_arr)
+audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
+
+for audio in audio_arr_list:
+  getAmplitudes(audio_arr=audio)
+
+plt.show()
 
 
 # plt.show()
-list = [[1,0],[2,90],[3,85],[4,80],[5,70],[6,60],[7,50],[8,40],[9,50],[10,60],[11,70],[12,80],[13,90],[14,100],[15,1],[16,40],[17,30],[18,40],[19,60]]
+# list = [[1,0],[2,90],[3,85],[4,80],[5,70],[6,60],[7,50],[8,40],[9,50],[10,60],[11,70],[12,80],[13,90],[14,100],[15,1],[16,40],[17,30],[18,40],[19,60]]
 
-print(linearApproximation(list,10,5,1))
-test = [row[1] for row in list]
-max = numpy.nanmax(test)
-print(test.index(max))
-print(test)
+# print(linearApproximation(list,10,5,1))
+# test = [row[1] for row in list]
+# max = numpy.nanmax(test)
+# print(test.index(max))
+# print(test)
