@@ -3,7 +3,7 @@ import os.path
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 import numpy
-import audioflux
+#import audioflux
 import scipy
 
 
@@ -348,6 +348,12 @@ def splitListAtValueCrossing(lst, value):
   return result
 
 
+###############################################################################
+# Berechnen der Grundfrequenz version 2.0
+###############################################################################
+def getFrequencyByAIR(audio_arr, sr):
+  pass
+
 
 ###############################################################################
 # Berechnet harmonische Grundfrequenz
@@ -424,11 +430,12 @@ def getAmplitudes(audio_arr):
 
 
 
-audio_arr, sr = openFile(r"viblib\v-10-28-7-29.wav")
+audio_arr, sr = openFile(r"viblib\v-10-28-7-26.wav")
 print("sample rate: ", sr)
 breaks_list = findBreaks(audio_arr=audio_arr)
 audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
 
+if audio_arr_list is None: exit()
 for audio in audio_arr_list:
   getAmplitudes(audio_arr=audio)
 
