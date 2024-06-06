@@ -3,9 +3,7 @@ import os.path
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 import numpy
-#import audioflux
 import scipy
-
 
 
 PLOT_INTERMIN_RESULTS : bool = True #Zwischenschritte Plotten?
@@ -16,6 +14,7 @@ fig : int = 0
 # WAV Datei öffnen
 ##############################################################################
 def openFile(filename):
+  sr=16000 #Resampling Rate (16kHz for ai pitch finding)
   # Check if file exists
   if os.path.exists(filename):
     print("File", filename, "exists.")
@@ -24,7 +23,7 @@ def openFile(filename):
     exit()
   # 2. Load the audio as a waveform `y`
   #    Store the sampling rate as `sr`
-  return librosa.load(filename)
+  return librosa.load(filename, sr=sr)
 ##############################################################################
 
 
@@ -47,7 +46,7 @@ def lowPassFilter(audio_arr, sr):
 ##############################################################################
 # Findest stellen mit einer längeren Folge von niedrigen Pegeln (Pausen)
 ##############################################################################
-def findBreaks(audio_arr):
+def findBreaks(audio_arr, sr):
   index = -1
 
 # Einstellbare Parameter
@@ -86,7 +85,7 @@ def findBreaks(audio_arr):
 
 
 ###############################################################################
-# Blöcke über Signalamplituden bilden
+# Blöcke über Signalamplituden bilden - deprecated
 ################################################################################
 def findBlocksbyAmplitude(audio_arr,sr):
   #frame_length = sr/10  -- frequenzen bis 10 HZ werden korrekt verarbeitet
@@ -122,12 +121,12 @@ def splitAudioArrAtBreaks(audio_arr, breaksList):
 
   audio_blocks = [] #audio Blöcke. Audio Array geteil an Pausen
 
-  #undgültige Pauseblöcke überspringen (falls vorhanden)
+  # undgültige Pauseblöcke überspringen (falls vorhanden)
   i : int = 0
   while len(breaksList[i]) != 2 and i < len(breaksList):
     i += 1
   if i == len(breaksList): return
-
+  #
   if (breaksList[i][0] != 0):
     audio_blocks.append(audio_arr[0:breaksList[i][0]])
     
@@ -140,7 +139,14 @@ def splitAudioArrAtBreaks(audio_arr, breaksList):
   
   return audio_blocks
 
-##############################################################################
+
+
+
+
+
+
+
+#############################################################################	
 # Vereinfachen von Graphen zu linearen Darstellungen
 # Parameter: data: Daten welche verifacht werden [Zeitpunkte, Werte]/ [x,y], window_size: "Auflösung" der vereinfachung (Je größer desto gröber die Vereinfachung)
 #            time_tolerance: Zeitwerte innherhalb werden zu einem Zeitwert zusammengefasst
@@ -348,11 +354,7 @@ def splitListAtValueCrossing(lst, value):
   return result
 
 
-###############################################################################
-# Berechnen der Grundfrequenz version 2.0
-###############################################################################
-def getFrequencyByAIR(audio_arr, sr):
-  pass
+
 
 
 ###############################################################################
@@ -386,7 +388,7 @@ def getFrequency(audio_arr, sr):
 # Amplituden erkennung
 ###############################################################################
 
-def getAmplitudes(audio_arr):
+def getAmplitudes(audio_arr, sr):
   amplitudes = []
   splits = splitListAtValueCrossing(audio_arr, 0)
 
@@ -413,33 +415,31 @@ def getAmplitudes(audio_arr):
     index = splitValues.index(amplitude)
     amplitudes.append([absSplit[index][0],amplitude])
 
-  
-
 
   if PLOT_INTERMIN_RESULTS:
     global fig
     plt.figure(fig)
     plt.plot(audio_arr)
 
-    amplitudes = linearApproximation(amplitudes, 0.2, sr/2, sr/4, fig)
-    if amplitudes:
-      plt.plot([row[0] for row in amplitudes], [row[1] for row in amplitudes],'-o')
+    #amplitudes = linearApproximation(amplitudes, 0.2, sr/2, sr/4, fig)
+    #if amplitudes:
+      #plt.plot([row[0] for row in amplitudes], [row[1] for row in amplitudes],'-o')
     fig += 1
   return amplitudes
 
 
 
 
-audio_arr, sr = openFile(r"viblib\v-10-28-7-26.wav")
-print("sample rate: ", sr)
-breaks_list = findBreaks(audio_arr=audio_arr)
-audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
+# audio_arr, sr = openFile(r"viblib\v-10-28-7-26.wav")
+# print("sample rate: ", sr)
+# breaks_list = findBreaks(audio_arr=audio_arr)
+# audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
 
-if audio_arr_list is None: exit()
-for audio in audio_arr_list:
-  getAmplitudes(audio_arr=audio)
+# if audio_arr_list is None: exit()
+# for audio in audio_arr_list:
+#   getAmplitudes(audio_arr=audio)
 
-plt.show()
+# plt.show()
 
 
 # plt.show()
