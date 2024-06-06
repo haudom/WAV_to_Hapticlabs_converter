@@ -34,6 +34,12 @@ print("tensorflow: %s" % tf.__version__)
 EXPECTED_SAMPLE_RATE = 16000
 MAX_ABS_INT16 = 32768.0
 
+model = hub.load("https://tfhub.dev/google/spice/2")
+logger = logging.getLogger()
+logger.setLevel(logging.ERROR)
+
+print("tensorflow: %s" % tf.__version__)
+
 # Function that converts the user-created audio to the format that the model 
 # expects: bitrate 16kHz and only one channel (mono).
 def convert_audio_for_model(user_file, output_file='converted_audio_file.wav'):
@@ -43,49 +49,36 @@ def convert_audio_for_model(user_file, output_file='converted_audio_file.wav'):
   return output_file
 
 
-def getFrequency(audio):
+def getFrequencies(audio_samples, sr = EXPECTED_SAMPLE_RATE):
 
-    
+  if sr != EXPECTED_SAMPLE_RATE:
+    audio_samples = librosa.resample(audio_samples, orig_sr=sr, target_sr=EXPECTED_SAMPLE_RATE)    
 
-    logger = logging.getLogger()
-    logger.setLevel(logging.ERROR)
-
-    print("tensorflow: %s" % tf.__version__)
-
-    converted_audio_file = convert_audio_for_model(user_file=audio, output_file='converted_audio_file.wav')
-
-    
-
-    # Loading audio samples from the wav file:
-    sample_rate, audio_samples = wavfile.read(converted_audio_file, 'rb')
-
-    # Normalizing the samples to be in [-1, 1]
-    audio_samples = audio_samples / float(MAX_ABS_INT16)
-    print(audio_samples.shape)
-
-    model = hub.load("https://tfhub.dev/google/spice/2")
 
   # We now feed the audio to the SPICE tf.hub model to obtain pitch and uncertainty outputs as tensors.
-    model_output = model.signatures["serving_default"](tf.constant(audio_samples, tf.float32))
+  model_output = model.signatures["serving_default"](tf.constant(audio_samples, tf.float32))
 
-    pitch_outputs = model_output["pitch"]
-    uncertainty_outputs = model_output["uncertainty"]
-    return pitch_outputs, uncertainty_outputs
+  pitch_outputs = model_output["pitch"]
+  uncertainty_outputs = model_output["uncertainty"]
+  return pitch_outputs, uncertainty_outputs
 
 #Sample Frequenz zuordung
-def toSampleValue(values):
-   return [[i*MAX_ABS_INT16, values[i]]for i in range(len(values))]
+#TODO wie groß ist der Abstand?
+#def toSampleValue(values):
+#   return [[i*abstand, values[i]]for i in range(len(values))]
 
 
 # Kivertiere die Frequenz in Hz
-def output2hz(pitch_output):
+def outputTooHz(pitch_output):
   # Constants taken from https://tfhub.dev/google/spice/2
   PT_OFFSET = 25.58
   PT_SLOPE = 63.07
-  FMIN = 10.0;
-  BINS_PER_OCTAVE = 12.0;
-  cqt_bin = pitch_output * PT_SLOPE + PT_OFFSET;
+  FMIN = 10.0
+  BINS_PER_OCTAVE = 12.0
+  cqt_bin = pitch_output * PT_SLOPE + PT_OFFSET
   return FMIN * 2.0 ** (1.0 * cqt_bin / BINS_PER_OCTAVE)
+
+
 
 # pitch_outputs, uncertainty_outputs = getFrequency(r"viblib\v-10-28-7-26.wav")
 
