@@ -9,8 +9,8 @@ Dieser Konverter wurde für die [VibViz - Datenbank](https://github.com/derikon/
 # Meilensteine
 
 - [x] Pausen erkennen
-- [ ] Frequenz erkennen
-- [ ] Amplituden erkennen
+- [x] Frequenz erkennen
+- [x] Amplituden erkennen
 - [ ] Estellung hlabs.json
 
 # Optionale Meilensteine
