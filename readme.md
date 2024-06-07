@@ -6,12 +6,15 @@ Dieser Konverter wurde für die [VibViz - Datenbank](https://github.com/derikon/
 # Get started
 // todo
 
+# Benutzung
+// todo
+
 # Meilensteine
 
 - [x] Pausen erkennen
 - [x] Frequenz erkennen
 - [x] Amplituden erkennen
-- [ ] Estellung hlabs.json
+- [x] Estellung hlabs.json
 
 # Optionale Meilensteine
 

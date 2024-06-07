@@ -3,7 +3,7 @@ from fading import *
 from enum import Enum
 import json
 
-hlabsBlocks = []
+
 
 class HlabsType(Enum):
     BREAK = 0,
@@ -55,3 +55,31 @@ class HlabsBlock:
 
     def __repr__(self):
        return self.__str__()
+    def toJson(self):
+        block = { }
+        if self.type == HlabsType.UNDEFINED:
+            return
+        
+        if self.type == HlabsType.BREAK:
+            block["type"] = "p"
+            block["data"] = {
+                "dur" : self.duration,
+            }
+        if self.type == HlabsType.SINUS:
+            block["type"] = "v"
+            block["data"] = {
+                "amp" : self.amplitude.item(),
+                "freq" : self.frequency.item(),
+                "form" : "sine",
+                "dur" : self.duration,
+                
+            }
+        return block
+
+def toJson(hlabsBlocks, fliePath):
+   sequence = {"sequence": []}
+
+   for block in hlabsBlocks:
+      sequence["sequence"].append(block.toJson())
+
+   json.dump(sequence, open(fliePath, 'w'))
