@@ -10,6 +10,13 @@ PLOT_INTERMIN_RESULTS : bool = True #Zwischenschritte Plotten?
 
 fig : int = 0
 
+
+def PlotInterminResults(value : bool):
+  global PLOT_INTERMIN_RESULTS
+  PLOT_INTERMIN_RESULTS = value
+
+
+
 ##############################################################################
 # WAV Datei öffnen
 ##############################################################################
@@ -63,12 +70,20 @@ def findBreaks(audio_arr, sr):
         index = i
     else:
       if i - index >= minBreakTime and index != -1:
-        breaksList.append([index,i])
+        #wenn zeit zwischen pausen kleiner als tolleranz dann die Letzte Pause verlängern statt neue zu erstellen
+        if len(breaksList) > 0 and breaksList[-1][1] >= i - minBreakTime:
+          breaksList[-1][1] = i
+        else:
+          breaksList.append([index,i])
       index = -1
 
   if len(audio_arr) - index >= minBreakTime and index != -1:
-    breaksList.append([index,len(audio_arr)])
-
+        #wenn zeit zwischen pausen kleiner als tolleranz dann die Letzte Pause verlängern statt neue zu erstellen
+        if len(breaksList) > 0 and breaksList[-1][1] >= len(audio_arr)-1 - minBreakTime:
+          breaksList[-1][1] = i
+        else:
+          breaksList.append([index,i])
+  global PLOT_INTERMIN_RESULTS
   if PLOT_INTERMIN_RESULTS:
 ## Plotten der gefundenen Pausen
     global fig
@@ -95,7 +110,7 @@ def findBlocksbyAmplitude(audio_arr,sr):
   local_minima_rms = scipy.signal.argrelextrema(audio_rms_arr[-1], numpy.less)
   local_minima_rms =  [hop_length*minimum for minimum in local_minima_rms]
 
-
+  global PLOT_INTERMIN_RESULTS
   if PLOT_INTERMIN_RESULTS:
     global fig
     plt.figure(fig)
@@ -375,6 +390,8 @@ def getFrequency(audio_arr, sr):
   mean_f0 = numpy.mean(f0[~numpy.isnan(f0)])
   print(mean_f0)
   print(f0)
+
+  global PLOT_INTERMIN_RESULTS
   if PLOT_INTERMIN_RESULTS:
     global fig
     plt.figure(fig)
@@ -415,7 +432,7 @@ def getAmplitudes(audio_arr, sr):
     index = splitValues.index(amplitude)
     amplitudes.append([absSplit[index][0],amplitude])
 
-
+  global PLOT_INTERMIN_RESULTS
   if PLOT_INTERMIN_RESULTS:
     global fig
     plt.figure(fig)
@@ -430,16 +447,16 @@ def getAmplitudes(audio_arr, sr):
 
 
 
-# audio_arr, sr = openFile(r"viblib\v-10-28-7-26.wav")
+#audio_arr, sr = openFile(r"viblib\v-09-10-6-46.wav")
 # print("sample rate: ", sr)
-# breaks_list = findBreaks(audio_arr=audio_arr)
+#breaks_list = findBreaks(audio_arr=audio_arr, sr=sr)
 # audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
 
 # if audio_arr_list is None: exit()
 # for audio in audio_arr_list:
 #   getAmplitudes(audio_arr=audio)
 
-# plt.show()
+#plt.show()
 
 
 # plt.show()

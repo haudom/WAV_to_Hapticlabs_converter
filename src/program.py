@@ -3,6 +3,7 @@ from hlabs import *
 from aiBasefrequency import *
 import sys
 import pathlib
+import matplotlib.pyplot as plt
 
 def rms(arr):
     return numpy.sqrt(numpy.mean([value ** 2. for value in arr]))
@@ -26,7 +27,7 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
         hlabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, 0, len(audioarr)))
 
         #frequency
-        frequencies = getFrequencies(audioarr, sr)
+        frequencies,_ = getFrequencies(audioarr, sr)
         frequencies = outputTooHz(frequencies)
         hlabsBlocks[0].frequency = rms(frequencies)   
         #amlitude
@@ -51,8 +52,8 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
 
 
     #last block
-    if(breaklist[-1][1] != len(audioarr)):
-        hlabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, breaklist[-1][1], len(audioarr)))
+    if(breaklist[-1][1] != len(audioarr)-1):
+        hlabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, breaklist[-1][1], len(audioarr)-1))
 
     #rms amplitude
     for block in hlabsBlocks:
@@ -75,8 +76,10 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
     #dump json
     toJson(hlabsBlocks, outputFolder / audioFile.with_suffix(".json").name)
 
+    
 
-PLOT_INTERMIN_RESULTS=False
+#Plotten ausschalten, ansosten steigt speicherverbrauch ins undendliche wenn mehrere Dateien verarbeitet werden
+PlotInterminResults(False)
 
 # Abfrage der Eingabeparameter
 OutputFolder = pathlib.Path().resolve()
