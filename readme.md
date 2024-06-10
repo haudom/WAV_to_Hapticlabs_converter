@@ -39,7 +39,7 @@ Wenn noch nicht getan, aktiviere die virtuelle Umgebung:
 /path/to/new/virtual/environment/Scripts/activate
 ```
 
-Starte program.py mit aktivierter Umgebung
+Starte jsonToWavProgram.py mit aktivierter Umgebung
 ```bash
 python /path/to/project/src/jsonToWavProgram.py <JSON dict path | JSON file path> [<WAV output path>]
 # dict Path: Pfad zum Ordner mit WAV-Dateien
