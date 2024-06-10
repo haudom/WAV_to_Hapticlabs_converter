@@ -10,11 +10,9 @@ import os
 # Samplerate: Samplerate der WAV-Datei
 ###################################################################################################################
 
-def jsonToWav(filepath, sample_rate = 16000):
+def jsonToWav(filepath : pathlib.Path, outputPath : pathlib.Path , sample_rate = 16000):
+
     audio_arr = []
-
-
-    ample_rate = 16000 # the number of samples per second 
     hlabsBlocks = readFromJson(filepath)
 
     for block in hlabsBlocks:
@@ -29,4 +27,4 @@ def jsonToWav(filepath, sample_rate = 16000):
     audio_arr = numpy.float32(audio_arr)
 
     #Speichern als wav
-    write(os.path.splitext(filepath)[0] + ".wav", sample_rate, audio_arr)
+    write(outputPath / filepath.with_suffix(".wav").name, sample_rate, audio_arr)

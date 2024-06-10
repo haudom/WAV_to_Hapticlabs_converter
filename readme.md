@@ -19,17 +19,34 @@ python -m venv /path/to/new/virtual/environment
 ```
 
 # Benutzung
-Aktiviere die virtuelle Umgebung
+Die Umwandlung ist in beide Richtungen möglich:
+## Umwandlung von .wav zu .json
+Wenn noch nicht getan, aktiviere die virtuelle Umgebung
 ```bash
 /path/to/new/virtual/environment/Scripts/activate
 ```
 Starte program.py mit aktivierter Umgebung
 ```bash
-python /path/to/project/src/program.py <dict path | file path> [<JSON output path>]
+python /path/to/project/src/program.py <WAV dict path | WAV file path> [<JSON output path>]
+# WAV dict Path: Pfad zum Ordner mit WAV-Dateien
+#   ODER WAV file path: Pfad zur WAV-Datei
+# output path: Pfad zum Ordner in dem JSON-Dateien gespeichert werden
+```
+## Umwandlung von .json zu .wav
+Zur Umwanldung von JSON zu WAV kann jsonTOWavProgram.py verwendet werden:
+Wenn noch nicht getan, aktiviere die virtuelle Umgebung:
+```bash
+/path/to/new/virtual/environment/Scripts/activate
+```
+
+Starte program.py mit aktivierter Umgebung
+```bash
+python /path/to/project/src/jsonToWavProgram.py <JSON dict path | JSON file path> [<WAV output path>]
 # dict Path: Pfad zum Ordner mit WAV-Dateien
 #   ODER file path: Pfad zur WAV-Datei
 # output path: Pfad zum Ordner in dem JSON-Dateien gespeichert werden
 ```
+
 
 # Meilensteine
 
