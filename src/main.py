@@ -30,7 +30,7 @@ def openFile(filename):
     exit()
   # 2. Load the audio as a waveform `y`
   #    Store the sampling rate as `sr`
-  return librosa.load(filename, sr=sr)
+  return librosa.load(path=filename, sr=sr,mono=True)
 ##############################################################################
 
 
@@ -437,10 +437,9 @@ def getAmplitudes(audio_arr, sr):
     global fig
     plt.figure(fig)
     plt.plot(audio_arr)
+    if amplitudes:
+      plt.plot([row[1] for row in amplitudes],color="red")
 
-    #amplitudes = linearApproximation(amplitudes, 0.2, sr/2, sr/4, fig)
-    #if amplitudes:
-      #plt.plot([row[0] for row in amplitudes], [row[1] for row in amplitudes],'-o')
     fig += 1
   return amplitudes
 

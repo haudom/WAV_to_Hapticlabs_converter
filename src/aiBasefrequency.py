@@ -34,7 +34,7 @@ print("tensorflow: %s" % tf.__version__)
 EXPECTED_SAMPLE_RATE = 16000
 MAX_ABS_INT16 = 32768.0
 
-model = hub.load("https://tfhub.dev/google/spice/2")
+model = hub.load("https://www.kaggle.com/models/google/spice/TensorFlow1/spice/2")
 logger = logging.getLogger()
 logger.setLevel(logging.ERROR)
 

@@ -11,37 +11,33 @@ class HlabsType(Enum):
     UNDEFINED = 2
 
 class HlabsBlock:
-    # def __init__(self, type : HlabsType,
-    #               sound_array = None, duration = None, amplitude = None, frequency = None, frequency_fade_in = None, frequency_fade_out = None, amplitude_fade_in = None, amplitude_fade_out = None):
-      
-    #   if sound_array is not None:
-    #     if duration is None: duration = len(sound_array)
-    #   if duration is not None:
-    #     if duration <= 0: raise Exception("duration must be greater than 0")
-
-    #   self.type = type
-    #   self.sound_array = sound_array
-
-    #   self.duration = duration # samples
-    #   self.amplitude = amplitude # between 0 and 1
-    #   self.frequency = frequency
-
-    #   self.frequency_fade_in = frequency_fade_in
-    #   self.frequency_fade_out = frequency_fade_out
-    #   self.amplitude_fade_in = amplitude_fade_in
-    #   self.amplitude_fade_out = amplitude_fade_out
 
     def __init__(self, type : HlabsType, full_sound_array=None, start_time=None, end_time=None, duration = None, 
                  amplitude = None, frequency = None, frequency_fade_in : fading = None, frequency_fade_out : fading = None, amplitude_fade_in : fading = None, amplitude_fade_out : fading = None):
+      '''
+      :param type: enum HlabsType
+      :param full_sound_array: wenn start- und Endtime angegeben wurde, wird automatisch nur der teil innerhalb des Zeitinvervals gespeichert
+      :param start_time: beginn in samples
+      :param end_time: ende in samples
+      :param duration: kann anstelle von start_time und end_time angegeben werden
+      :param amplitude: between 0 and 1
+      :param frequency: in Hz
+      :param frequency_fade_in:
+      :param frequency_fade_out:
+      :param amplitude_fade_in:
+      :param amplitude_fade_out:
+      '''
+      
       if not duration:
         if start_time >= end_time: raise Exception("start time must be smaller than end time")
       
       self.type : HlabsType = type
       
       if not duration:
-        if not full_sound_array: raise Exception("full_sound_array must be provided if no duration is provided")
-        if not start_time: raise Exception("start time must be provided if no duration is provided")
-        if not end_time: raise Exception("end time must be provided if no duration is provided")
+        if full_sound_array is None or (isinstance(full_sound_array, numpy.ndarray) and full_sound_array.size == 0): 
+          raise Exception("full_sound_array must be provided if no duration is provided")
+        if start_time is None: raise Exception("start time must be provided if no duration is provided")
+        if end_time is None: raise Exception("end time must be provided if no duration is provided")
         self.sound_array : numpy.ndarray = full_sound_array[start_time:end_time] #audio in this block
       else:
         self.sound_array : numpy.ndarray = full_sound_array
