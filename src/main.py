@@ -438,10 +438,26 @@ def getAmplitudes(audio_arr, sr):
     plt.figure(fig)
     plt.plot(audio_arr)
     if amplitudes:
-      plt.plot([row[1] for row in amplitudes],color="red")
+      plt.plot([row[0] for row in amplitudes],[row[1] for row in amplitudes],color="red")
 
     fig += 1
   return amplitudes
+
+
+def interpolate(x_y_arr, signal_length):
+  x = [row[0] for row in x_y_arr]
+  y = [row[1] for row in x_y_arr]
+  interpolated = numpy.interp(x = range(0, signal_length), xp=x, fp=y, left=x_y_arr[0][1], right=x_y_arr[-1][1])
+  if PLOT_INTERMIN_RESULTS:
+    global fig
+    plt.figure(fig)
+    plt.plot(interpolated)
+    fig += 1
+  return interpolated
+
+def rms(arr):
+    return numpy.sqrt(numpy.mean([value ** 2. for value in arr]))
+
 
 
 

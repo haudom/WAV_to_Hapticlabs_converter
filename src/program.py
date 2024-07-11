@@ -5,9 +5,6 @@ import sys
 import pathlib
 import matplotlib.pyplot as plt
 
-def rms(arr):
-    return numpy.sqrt(numpy.mean([value ** 2. for value in arr]))
-
 
 def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
 
@@ -32,7 +29,7 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
         hlabsBlocks[0].frequency = rms(frequencies)   
         #amlitude
         amplitdues = getAmplitudes(audioarr, sr)
-        hlabsBlocks[0].amplitude = rms([amplitude[1] for amplitude in amplitdues])
+        hlabsBlocks[0].amplitude = rms(interpolate(amplitdues,len(audioarr)))
         #duration in ms
         hlabsBlocks[0].duration = hlabsBlocks[0].duration / sr * 1000
         toJson(hlabsBlocks, outputFolder / audioFile.with_suffix(".json").name)
@@ -58,7 +55,7 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
     #rms amplitude
     for block in hlabsBlocks:
         if block.type == HlabsType.SINUS:
-            block.amplitude = rms([row[1] for row in getAmplitudes(block.sound_array, sr)])
+            block.amplitude = rms(interpolate(getAmplitudes(block.sound_array, sr),len(block.sound_array)))
 
     #rms frequency
     for block in hlabsBlocks:
