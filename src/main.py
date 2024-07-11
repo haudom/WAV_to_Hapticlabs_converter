@@ -436,10 +436,13 @@ def getAmplitudes(audio_arr, sr):
   if PLOT_INTERMIN_RESULTS:
     global fig
     plt.figure(fig)
-    plt.plot(audio_arr)
+    plt.plot(audio_arr, label="Zeitsignal")
     if amplitudes:
-      plt.plot([row[0] for row in amplitudes],[row[1] for row in amplitudes],color="red")
-
+      plt.plot([row[0] for row in amplitudes],[row[1] for row in amplitudes],color="red",marker="x",label="Amplituden")
+    plt.legend()
+    plt.title("Amplituden (getAmplitudes())")
+    plt.xlabel("Samples")
+    plt.ylabel("Auslenkung")
     fig += 1
   return amplitudes
 
@@ -451,7 +454,9 @@ def interpolate(x_y_arr, signal_length):
   if PLOT_INTERMIN_RESULTS:
     global fig
     plt.figure(fig)
-    plt.plot(interpolated)
+    plt.plot(interpolated,label="Interpolierterung")
+    plt.legend()
+    plt.title("Interpolierung (interpolate())")
     fig += 1
   return interpolated
 
