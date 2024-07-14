@@ -87,7 +87,8 @@ def findBreaks(audio_arr, sr):
   if PLOT_INTERMIN_RESULTS:
 ## Plotten der gefundenen Pausen
     global fig
-    plt.figure(fig)
+    plt.figure(fig).set_figwidth(20)
+    plt.axhline(0, color="black")
     for breaks in breaksList:
       if len(breaks)==2:
         plt.gca().add_patch(Rectangle((breaks[0],-1),width=breaks[1]-breaks[0],height=2, facecolor = 'yellow', edgecolor="green"))
@@ -366,6 +367,10 @@ def splitListAtValueCrossing(lst, value):
       temp = []
     else:
       temp.append(lst[i])
+
+#wenn keine spilts gefunden werde, wird eingangsliste zurückgegeben
+  if result == []:
+    result.append(lst)
   return result
 
 
@@ -435,7 +440,7 @@ def getAmplitudes(audio_arr, sr):
   global PLOT_INTERMIN_RESULTS
   if PLOT_INTERMIN_RESULTS:
     global fig
-    plt.figure(fig)
+    plt.figure(fig).set_figwidth(20)
     plt.plot(audio_arr, label="Zeitsignal")
     if amplitudes:
       plt.plot([row[0] for row in amplitudes],[row[1] for row in amplitudes],color="red",marker="x",label="Amplituden")
@@ -450,6 +455,7 @@ def getAmplitudes(audio_arr, sr):
 def interpolate(x_y_arr, signal_length):
   x = [row[0] for row in x_y_arr]
   y = [row[1] for row in x_y_arr]
+  print("Inetrpolate","xy_arr",x_y_arr,"x",x,"y",y)
   interpolated = numpy.interp(x = range(0, signal_length), xp=x, fp=y, left=x_y_arr[0][1], right=x_y_arr[-1][1])
   if PLOT_INTERMIN_RESULTS:
     global fig
