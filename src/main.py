@@ -57,7 +57,7 @@ def findBreaks(audio_arr, sr):
   index = -1
 
 # Einstellbare Parameter
-  minBreakTime = sr / 20 #in samples #eine Pause muss mindestens eine 20 hz Periode lang sein
+  minBreakTime = minBreakDistance = sr / 40 #in samples #eine Pause muss mindestens eine 20 hz Periode lang sein
   toleranz = 0.007 # Amplituden toleranz zwischen 0 und 1 (welsche Werte werden nicht berücksichtigt/als Pause bewertet)
 ##
 
@@ -67,22 +67,22 @@ def findBreaks(audio_arr, sr):
 
     if value < toleranz and value > -toleranz:
       if index == -1:
-        index = i
+          index = i
     else:
       if i - index >= minBreakTime and index != -1:
         #wenn zeit zwischen pausen kleiner als tolleranz dann die Letzte Pause verlängern statt neue zu erstellen
-        if len(breaksList) > 0 and breaksList[-1][1] >= i - minBreakTime:
+        if len(breaksList) > 0 and breaksList[-1][1] >= index - minBreakTime:
           breaksList[-1][1] = i
         else:
           breaksList.append([index,i])
       index = -1
 
-  if len(audio_arr) - index >= minBreakTime and index != -1:
+  if len(audio_arr) - index -1 >= minBreakTime and index != -1:
         #wenn zeit zwischen pausen kleiner als tolleranz dann die Letzte Pause verlängern statt neue zu erstellen
         if len(breaksList) > 0 and breaksList[-1][1] >= len(audio_arr)-1 - minBreakTime:
           breaksList[-1][1] = i
         else:
-          breaksList.append([index,i])
+          breaksList.append([index,len(audio_arr)-1])
   global PLOT_INTERMIN_RESULTS
   if PLOT_INTERMIN_RESULTS:
 ## Plotten der gefundenen Pausen
@@ -148,7 +148,8 @@ def splitAudioArrAtBreaks(audio_arr, breaksList):
     
   for n, breakpoints in enumerate(breaksList):
     if n >= len(breaksList) - 1:
-      audio_blocks.append(audio_arr[breaksList[n][1]:])
+      if breaksList[n][1] < len(audio_arr):
+        audio_blocks.append(audio_arr[breaksList[n][1]:])
     else:
       audio_blocks.append(audio_arr[breaksList[n][1]:breaksList[n+1][0]])
 
@@ -455,7 +456,6 @@ def getAmplitudes(audio_arr, sr):
 def interpolate(x_y_arr, signal_length):
   x = [row[0] for row in x_y_arr]
   y = [row[1] for row in x_y_arr]
-  print("Inetrpolate","xy_arr",x_y_arr,"x",x,"y",y)
   interpolated = numpy.interp(x = range(0, signal_length), xp=x, fp=y, left=x_y_arr[0][1], right=x_y_arr[-1][1])
   if PLOT_INTERMIN_RESULTS:
     global fig
@@ -473,10 +473,14 @@ def rms(arr):
 
 
 
-#audio_arr, sr = openFile(r"viblib\v-09-10-6-46.wav")
+#audio_arr, sr = openFile(r"viblib\v-09-10-4-25.wav")
 # print("sample rate: ", sr)
 #breaks_list = findBreaks(audio_arr=audio_arr, sr=sr)
+#print(breaks_list)
+
 # audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
+# print(audio_arr_list)
+#print(audio_arr_list[-1])
 
 # if audio_arr_list is None: exit()
 # for audio in audio_arr_list:
