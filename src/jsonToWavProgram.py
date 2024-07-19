@@ -14,7 +14,7 @@ elif len(sys.argv) == 3:
         OutputFolder.mkdir()
 
     elif OutputFolder.is_file():
-        print("OutputFolder must be a Folder")
+        print("Output path must be a Folder")
         exit()
 
 else:

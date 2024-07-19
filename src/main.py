@@ -57,7 +57,7 @@ def findBreaks(audio_arr, sr):
   index = -1
 
 # Einstellbare Parameter
-  minBreakTime = minBreakDistance = sr / 40 #in samples #eine Pause muss mindestens eine 20 hz Periode lang sein
+  minBreakTime = minBreakDistance = sr / 40 #in samples #eine Pause muss mindestens eine 40 hz Periode lang sein
   toleranz = 0.007 # Amplituden toleranz zwischen 0 und 1 (welsche Werte werden nicht berücksichtigt/als Pause bewertet)
 ##
 
@@ -65,24 +65,28 @@ def findBreaks(audio_arr, sr):
 
   for i, value in enumerate(audio_arr):
 
-    if value < toleranz and value > -toleranz:
+    if value < toleranz and value > -toleranz and i != len(audio_arr) - 1:
       if index == -1:
           index = i
     else:
       if i - index >= minBreakTime and index != -1:
-        #wenn zeit zwischen pausen kleiner als tolleranz dann die Letzte Pause verlängern statt neue zu erstellen
+        #Wenn Zeit zwischen Pausen kleiner als Tolleranz dann die letzte Pause verlängern statt neue zu erstellen
         if len(breaksList) > 0 and breaksList[-1][1] >= index - minBreakTime:
           breaksList[-1][1] = i
         else:
           breaksList.append([index,i])
       index = -1
+  # --Wenn Zeit bis endesignal kleinder ist als Mindespausenlänge, letzte Pause verlängern
+  if len(breaksList) > 0 and len(audio_arr) - breaksList[-1][1] < minBreakTime:
+    breaksList[-1][1] = len(audio_arr)-1
+  # elif(len(audio_arr) - index > minBreakTime and index != -1):  
+  # #Wenn Zeit/ Abstand zwischen Pausen kleiner als Mindestabstand dann die letzte Pause verlängern statt neue zu erstellen
+  #   if len(breaksList) > 0 and breaksList[-1][1] >= len(audio_arr)-1 - minBreakTime:
+  #     breaksList[-1][1] = i
+  #   else:
+  #     breaksList.append([index,len(audio_arr)-1])
 
-  if len(audio_arr) - index -1 >= minBreakTime and index != -1:
-        #wenn zeit zwischen pausen kleiner als tolleranz dann die Letzte Pause verlängern statt neue zu erstellen
-        if len(breaksList) > 0 and breaksList[-1][1] >= len(audio_arr)-1 - minBreakTime:
-          breaksList[-1][1] = i
-        else:
-          breaksList.append([index,len(audio_arr)-1])
+
   global PLOT_INTERMIN_RESULTS
   if PLOT_INTERMIN_RESULTS:
 ## Plotten der gefundenen Pausen
@@ -473,10 +477,11 @@ def rms(arr):
 
 
 
-#audio_arr, sr = openFile(r"viblib\v-09-10-4-25.wav")
+#audio_arr, sr = openFile(r"viblib\v-09-10-3-52.wav")
 # print("sample rate: ", sr)
 #breaks_list = findBreaks(audio_arr=audio_arr, sr=sr)
 #print(breaks_list)
+#print(len(audio_arr))
 
 # audio_arr_list = splitAudioArrAtBreaks(audio_arr=audio_arr, breaksList=breaks_list)
 # print(audio_arr_list)

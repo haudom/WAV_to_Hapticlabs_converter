@@ -31,7 +31,7 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
         amplitdues = getAmplitudes(audioarr, sr)
         hlabsBlocks[0].amplitude = rms(interpolate(amplitdues,len(audioarr)))
         #duration in ms
-        hlabsBlocks[0].duration = hlabsBlocks[0].duration / sr * 1000
+        hlabsBlocks[0].duration = hlabsBlocks[0].duration * 1000 / sr
         toJson(hlabsBlocks, outputFolder / audioFile.with_suffix(".json").name)
         return
 
@@ -50,7 +50,7 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
 
     #last block
     if(breaklist[-1][1] != len(audioarr)-1):
-        hlabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, breaklist[-1][1], len(audioarr)-1))
+        hlabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, breaklist[-1][1], len(audioarr)))
 
     #rms amplitude
     for block in hlabsBlocks:
@@ -66,7 +66,7 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
 
     #duration to ms
     for block in hlabsBlocks:
-        block.duration = block.duration / sr * 1000
+        block.duration = block.duration * 1000 / sr
 
     print(hlabsBlocks)
 
