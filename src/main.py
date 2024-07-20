@@ -370,8 +370,8 @@ def splitListAtValueCrossing(lst, value):
       if temp:
         result.append(temp)
       temp = []
-    else:
-      temp.append(lst[i])
+    
+    temp.append(lst[i])
 
 #wenn keine spilts gefunden werde, wird eingangsliste zurückgegeben
   if result == []:
@@ -508,8 +508,9 @@ def simpleSplitByAmplitude(audio_arr, amplitudes, sr, start = 0, stop = None):
 
   return numpy.split(audio_arr, cut_indices), cut_indices
 
-def simpleBlockByAmplitude(audio_arr, amplitudes, sr, start, stop):
+def simpleBlockByAmplitude(audio_arr, amplitudes, sr,start = 0, stop = None):
 
+  if stop is None: stop = len(audio_arr)
   if start >= stop:  raise ValueError("start must be smaller than stop")
 
   audios, cuts = simpleSplitByAmplitude(audio_arr, amplitudes, sr, start=start, stop=stop)
@@ -520,9 +521,8 @@ def simpleBlockByAmplitude(audio_arr, amplitudes, sr, start, stop):
   if len(cuts) > 1:
     for i in range(0, len(cuts)-1):
       blocks.append([cuts[i], cuts[i+1]-1])
-
-  blocks.append([cuts[-1], stop-1])
-    
+  if cuts[-1] < stop-1:
+    blocks.append([cuts[-1], stop-1])
   return audios,blocks
 
 
