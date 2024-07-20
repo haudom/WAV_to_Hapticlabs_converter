@@ -48,12 +48,14 @@ class HlabsBlock:
         self.duration : int = duration
 
       self.amplitude = amplitude if amplitude is not None else None # between 0 and 1
-      self.frequency = frequency if frequency is not None else None   # in Hz
+      self.frequency = frequency if frequency is not None else None # in Hz
 
       self.frequency_fade_in = frequency_fade_in if frequency_fade_in is not None else None
       self.frequency_fade_out = frequency_fade_out if frequency_fade_out is not None else None
       self.amplitude_fade_in = amplitude_fade_in if amplitude_fade_in is not None else None
       self.amplitude_fade_out = amplitude_fade_out if amplitude_fade_out is not None else None
+      self.start_time = start_time
+      self.end_time = end_time
 
     def __str__(self):
        return "{type: " + str(self.type) + ", duration: " + str(self.duration) + ", amplitude: " + str(self.amplitude) + ", frequency: " + str(self.frequency) + "}"

@@ -6,10 +6,25 @@ import pathlib
 import matplotlib.pyplot as plt
 
 
+
+def createSinusBlocks(audioarr,start,stop,sr, halabsBlocks, rawAmplitudes):
+    _ , blocks = simpleBlockByAmplitude(audioarr, rawAmplitudes, sr, start, stop)
+    for block in blocks:
+        halabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, block[0], block[1]))
+
+
+
 def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
+
+    PlotInterminResults(False)
 
     hlabsBlocks = []
     audioarr, sr = openFile(audioFile)
+    frequencies, _ = getFrequencies(audioarr)
+    frequencies = outputTooHz(frequencies)
+    frequencies = numpy.interp(range(0,len(audioarr)), numpy.arange(0,len(frequencies)*512,512),frequencies,right=frequencies[-1])
+    rawAmplitudes = getAmplitudes(audioarr, sr)
+    amplitdues = interpolate(rawAmplitudes, len(audioarr))
 
     breaklist = findBreaks(audioarr, sr)
 
@@ -21,48 +36,31 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
 
     if not breaklist:
         #full audio file as block
-        hlabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, 0, len(audioarr)))
-
-        #frequency
-        frequencies,_ = getFrequencies(audioarr, sr)
-        frequencies = outputTooHz(frequencies)
-        hlabsBlocks[0].frequency = rms(frequencies)   
-        #amlitude
-        amplitdues = getAmplitudes(audioarr, sr)
-        hlabsBlocks[0].amplitude = rms(interpolate(amplitdues,len(audioarr)))
-        #duration in ms
-        hlabsBlocks[0].duration = hlabsBlocks[0].duration * 1000 / sr
-        toJson(hlabsBlocks, outputFolder / audioFile.with_suffix(".json").name)
-        return
+        createSinusBlocks(audioarr,0,len(audioarr),sr,hlabsBlocks,rawAmplitudes)
 
 
-
-    if breaklist[0][0] == 0:
-        hlabsBlocks.append(HlabsBlock(HlabsType.BREAK, audioarr, 0, breaklist[0][1]))
     else:
-        hlabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, 0, breaklist[0][0]))
-        hlabsBlocks.append(HlabsBlock(HlabsType.BREAK, audioarr, breaklist[0][0], breaklist[0][1]))
+        if breaklist[0][0] == 0:
+            hlabsBlocks.append(HlabsBlock(HlabsType.BREAK, audioarr, 0, breaklist[0][1]))
+        else:
+            createSinusBlocks(audioarr,0,breaklist[0][0],sr,hlabsBlocks,rawAmplitudes)
+            hlabsBlocks.append(HlabsBlock(HlabsType.BREAK, audioarr, breaklist[0][0], breaklist[0][1]))
 
-    for i in range(1,len(breaklist)):
-        hlabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, breaklist[i-1][1], breaklist[i][0]))
-        hlabsBlocks.append(HlabsBlock(HlabsType.BREAK, audioarr, breaklist[i][0], breaklist[i][1]))
+        for i in range(1,len(breaklist)):
+            createSinusBlocks(audioarr,breaklist[i-1][1],breaklist[i][0],sr,hlabsBlocks,rawAmplitudes)
+            hlabsBlocks.append(HlabsBlock(HlabsType.BREAK, audioarr, breaklist[i][0], breaklist[i][1]))
 
 
-    #last block
-    if(breaklist[-1][1] != len(audioarr)-1):
-        hlabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, breaklist[-1][1], len(audioarr)))
+        #last block
+        if(breaklist[-1][1] != len(audioarr)-1):
+            createSinusBlocks(audioarr,breaklist[-1][1],len(audioarr),sr,hlabsBlocks,rawAmplitudes)
 
-    #rms amplitude
+    #Block amplitudes and frequencies
     for block in hlabsBlocks:
         if block.type == HlabsType.SINUS:
-            block.amplitude = rms(interpolate(getAmplitudes(block.sound_array, sr),len(block.sound_array)))
+            block.amplitude = rms(amplitdues[block.start_time:block.end_time])
+            block.frequency = rms(frequencies[block.start_time:block.end_time])
 
-    #rms frequency
-    for block in hlabsBlocks:
-        if block.type == HlabsType.SINUS:
-            frequencies, _  = getFrequencies(block.sound_array)
-            frequencies = outputTooHz(frequencies)
-            block.frequency = rms(frequencies)
 
     #duration to ms
     for block in hlabsBlocks:
@@ -75,8 +73,8 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
 
     
 
-#Plotten ausschalten, ansosten steigt speicherverbrauch ins undendliche wenn mehrere Dateien verarbeitet werden
-PlotInterminResults(False)
+
+
 
 # Abfrage der Eingabeparameter
 OutputFolder = pathlib.Path().resolve()

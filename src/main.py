@@ -137,7 +137,7 @@ def findBlocksbyAmplitude(audio_arr,sr):
 def splitAudioArrAtBreaks(audio_arr, breaksList):
   # anfangsbedingungen
   if len(audio_arr) <= 0: return
-  if len(breaksList) <= 0: return
+  if len(breaksList) <= 0: return [audio_arr]
 
   audio_blocks = [] #audio Blöcke. Audio Array geteil an Pausen
 
@@ -157,7 +157,7 @@ def splitAudioArrAtBreaks(audio_arr, breaksList):
     else:
       audio_blocks.append(audio_arr[breaksList[n][1]:breaksList[n+1][0]])
 
-  
+ 
   return audio_blocks
 
 
@@ -475,6 +475,62 @@ def rms(arr):
 
 
 
+def simpleSplitByAmplitude(audio_arr, amplitudes, sr, start = 0, stop = None):
+
+  if stop is None: stop = len(audio_arr)
+
+  if start >= stop:  raise ValueError("start must be smaller than stop")
+
+  fisrstAmplitudeIndex = 0
+  lastAmplitudeIndex = 0
+  for i, amplitude in enumerate(amplitudes):
+    if amplitude[0] >= start and amplitude[0] < stop:
+      fisrstAmplitudeIndex = i
+      break
+  for i, amplitude in reversed(list(enumerate(amplitudes))):
+    if amplitude[0] >= start and amplitude[0] < stop:
+      lastAmplitudeIndex = i
+      break
+
+  amplitudes = amplitudes[fisrstAmplitudeIndex:lastAmplitudeIndex+1]
+
+  minBlockSize = sr//40 # meindestens eine 40HZ Periode
+  threshold = 0.1 # 10% amplitudenänderung führen zu neuen Block
+  reference_amplitude = amplitudes[0]
+  cut_indices = []
+  #finde stellen an den das signal geteilt wird
+  for amplitude in amplitudes:
+    if abs(amplitude[1] - reference_amplitude[1]) > threshold and amplitude[0] - reference_amplitude[0] > minBlockSize:
+      cut_indices.append(amplitude[0])
+      reference_amplitude = amplitude
+
+  if len(cut_indices) <= 0: return numpy.array([[audio_arr]]), cut_indices
+
+  return numpy.split(audio_arr, cut_indices), cut_indices
+
+def simpleBlockByAmplitude(audio_arr, amplitudes, sr, start, stop):
+
+  if start >= stop:  raise ValueError("start must be smaller than stop")
+
+  audios, cuts = simpleSplitByAmplitude(audio_arr, amplitudes, sr, start=start, stop=stop)
+  if len(cuts) == 0: return audios, [[start, stop-1]]
+  blocks = []
+  blocks.append([start,cuts[0]-1])
+
+  if len(cuts) > 1:
+    for i in range(0, len(cuts)-1):
+      blocks.append([cuts[i], cuts[i+1]-1])
+
+  blocks.append([cuts[-1], stop-1])
+    
+  return audios,blocks
+
+
+def blockMeanFrequency(frequencies, block):
+  return rms(frequencies[block[0]:block[1]])
+
+def blockMeanAmplitude(inrterpolatedAmplitudes, block):
+  return rms(inrterpolatedAmplitudes[block[0]:block[1]])
 
 
 #audio_arr, sr = openFile(r"viblib\v-09-10-3-52.wav")
