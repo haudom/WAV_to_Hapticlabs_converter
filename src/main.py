@@ -473,9 +473,39 @@ def interpolate(x_y_arr, signal_length):
 def rms(arr):
     return numpy.sqrt(numpy.mean([value ** 2. for value in arr]))
 
+def createBlocksFromCutIndices(cut_indices, start, stop):
+  if len(cut_indices) == 0: return [[start, stop-1]]
+  blocks = []
+  blocks.append([start,cut_indices[0]-1])
 
+  if len(cut_indices) > 1:
+    for i in range(0, len(cut_indices)-1):
+      blocks.append([cut_indices[i], cut_indices[i+1]-1])
+  if cut_indices[-1] < stop-1:
+    blocks.append([cut_indices[-1], stop-1])
+  return blocks
 
+###############################################################################
+# Signal bei 10% Amplitudenänderung teilen
+###############################################################################
 def simpleSplitByAmplitude(audio_arr, amplitudes, sr, start = 0, stop = None):
+  """
+  Splits the given audio array by amplitude changes.
+
+  Args:
+      audio_arr (numpy.ndarray): The audio array to split.
+      amplitudes (List[Tuple[int, float]]): A list of tuples containing the time and amplitude values.
+      sr (int): The sample rate of the audio.
+      start (int, optional): The starting index of the audio array. Defaults to 0.
+      stop (int, optional): The stopping index of the audio array. Defaults to None.
+
+  Returns:
+      Tuple[numpy.ndarray, List[int]]: A tuple containing the splited audio array and the cut indices.
+
+  Raises:
+      ValueError: If start is greater than or equal to stop.
+
+  """
 
   if stop is None: stop = len(audio_arr)
 
@@ -483,10 +513,13 @@ def simpleSplitByAmplitude(audio_arr, amplitudes, sr, start = 0, stop = None):
 
   fisrstAmplitudeIndex = 0
   lastAmplitudeIndex = 0
+  #finde erstes Amplitudentupel das start entspricht
   for i, amplitude in enumerate(amplitudes):
     if amplitude[0] >= start and amplitude[0] < stop:
       fisrstAmplitudeIndex = i
       break
+
+  #finde letztes Amplitudentupel das stop entspricht
   for i, amplitude in reversed(list(enumerate(amplitudes))):
     if amplitude[0] >= start and amplitude[0] < stop:
       lastAmplitudeIndex = i
@@ -494,7 +527,7 @@ def simpleSplitByAmplitude(audio_arr, amplitudes, sr, start = 0, stop = None):
 
   amplitudes = amplitudes[fisrstAmplitudeIndex:lastAmplitudeIndex+1]
 
-  minBlockSize = sr//40 # meindestens eine 40HZ Periode
+  minBlockSize = sr//40 # meindestens eine 40HZ Periode bzw. 25ms
   threshold = 0.1 # 10% amplitudenänderung führen zu neuen Block
   reference_amplitude = amplitudes[0]
   cut_indices = []
@@ -504,11 +537,36 @@ def simpleSplitByAmplitude(audio_arr, amplitudes, sr, start = 0, stop = None):
       cut_indices.append(amplitude[0])
       reference_amplitude = amplitude
 
+  
+
   if len(cut_indices) <= 0: return numpy.array([[audio_arr]]), cut_indices
+
+  if cut_indices[-1] >  stop-minBlockSize: cut_indices.pop()
 
   return numpy.split(audio_arr, cut_indices), cut_indices
 
+###############################################################################
+# Blöcke aus Amplituden bilden
+###############################################################################
 def simpleBlockByAmplitude(audio_arr, amplitudes, sr,start = 0, stop = None):
+  """
+  Generates blocks from the given audio array based on amplitude changes.
+
+  Args:
+      audio_arr (numpy.ndarray): The audio array to be divided into blocks.
+      amplitudes (list): A list of tuples representing the amplitude changes and their corresponding indices.
+      sr (int): The sample rate of the audio.
+      start (int, optional): The starting index of the audio array. Defaults to 0.
+      stop (int, optional): The ending index of the audio array. Defaults to end of the audio array.
+
+  Returns:
+      tuple: A tuple containing two elements:
+          - audios (numpy.ndarray): An array of audio arrays, each representing a block.
+          - blocks (list): A list of tuples representing the start and end indices of each block.
+
+  Raises:
+      ValueError: If start is greater than or equal to stop.
+  """
 
   if stop is None: stop = len(audio_arr)
   if start >= stop:  raise ValueError("start must be smaller than stop")
@@ -524,11 +582,75 @@ def simpleBlockByAmplitude(audio_arr, amplitudes, sr,start = 0, stop = None):
   if cuts[-1] < stop-1:
     blocks.append([cuts[-1], stop-1])
   return audios,blocks
+###############################################################################
+# Funktion zur dynamischen Frequenztoleranz bestimmung
+###############################################################################
+def dynamicFrequenceyTolerance(frequencey):
+  deafaultToleranceValue = 20 #Standardtolleranz 40HZ Tolleranz
+  dynamicToleraceStart = 200 #Beginn der Linearen Tolleranz bei 200HZ
+  dynamicTileranceEndValue = 200 #Endtollerzant bei 1000HZ = 400HZ Tolleranz
+  m = (dynamicTileranceEndValue - deafaultToleranceValue) / (1000 - dynamicToleraceStart)
+
+  #Standarttolleranz
+  if frequencey < dynamicToleraceStart:
+    return deafaultToleranceValue
+  #linear "dynamische" Tolleranz
+  else:
+    return m * (frequencey - dynamicToleraceStart) + deafaultToleranceValue
+###############################################################################
+# Überprüfung ob zwei Frequenzen innerhalb der dynamischen Toleranz liegen
+###############################################################################
+def IsfreqencyinTolerance(frequency1, frequency2):
+  delta = abs(frequency1 - frequency2)
+  tolerance = dynamicFrequenceyTolerance(max(frequency1,frequency2))
+  return delta < tolerance
+
+###############################################################################
+# Teilindices eines Audiosignal im Abhängigkeit von der Frequenz
+###############################################################################
+def SimpleSplitIndiecesByFrequency(frequencies,sr,start = 0, stop = None):
+  
+  if stop is None: stop = len(frequencies)
+  if start >= stop:  raise ValueError("start must be smaller than stop")
+  if start < 0: raise ValueError("start must be greater than or equal to 0")
+  if stop > len(frequencies): raise ValueError("stop must be smaller than length of frequencies")
+
+  minBlockSize = sr//40 # meindestens eine 40HZ Periode bzw. 25ms
+
+  cut_indices = []
+  referenceFrequency = frequencies[start]
+  referenceIndex = start
+  for i in range(start, stop):
+    if not IsfreqencyinTolerance(referenceFrequency, frequencies[i]) and i-referenceIndex>minBlockSize:
+      cut_indices.append(i)
+      referenceFrequency = frequencies[i]
+      referenceIndex = i
+
+  if len(cut_indices) > 0 and cut_indices[-1] > stop-1 - minBlockSize: cut_indices.pop()
+  return cut_indices
+
+def simpleBlockByFrequency(frequencies,sr, start = 0, stop = None):
+  if stop is None: stop = len(frequencies)
+  if start >= stop:  raise ValueError("start must be smaller than stop")
+  if start < 0: raise ValueError("start must be greater than or equal to 0")
+  if stop > len(frequencies): raise ValueError("stop must be smaller than length of frequencies")
+
+  cut_indices = SimpleSplitIndiecesByFrequency(frequencies,sr=sr, start=start, stop=stop)
+  return createBlocksFromCutIndices(cut_indices, start, stop)
+  
 
 
+
+
+###############################################################################
+# Durschschnittfrequenz von Block bilden
+###############################################################################
 def blockMeanFrequency(frequencies, block):
   return rms(frequencies[block[0]:block[1]])
 
+###############################################################################
+# Durschschnittsamplitude von Block bilden
+###############################################################################
 def blockMeanAmplitude(inrterpolatedAmplitudes, block):
   return rms(inrterpolatedAmplitudes[block[0]:block[1]])
 

@@ -7,10 +7,18 @@ import matplotlib.pyplot as plt
 
 
 
-def createSinusBlocks(audioarr,start,stop,sr, halabsBlocks, rawAmplitudes):
+def createSinusBlocks(audioarr,start,stop,sr, halabsBlocks, rawAmplitudes,frequencies):
+    i = 0
     _ , blocks = simpleBlockByAmplitude(audioarr, rawAmplitudes, sr, start, stop)
     for block in blocks:
-        halabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, block[0], block[1]))
+        print("block",block)
+        subBlocks = simpleBlockByFrequency(frequencies, sr, block[0], block[1])
+        subBlocks[-1][1] +=1 #vermeiden dass index am Ende vom Amplitudenblock 2 mal abgezogen wird
+        for subBlock in subBlocks:
+            i = i+1
+            print("i",i)
+            print("sub",subBlock)
+            halabsBlocks.append(HlabsBlock(HlabsType.SINUS, audioarr, subBlock[0], subBlock[1]))
 
 
 
@@ -36,24 +44,24 @@ def program(audioFile : pathlib.Path, outputFolder : pathlib.Path):
 
     if not breaklist:
         #full audio file as block
-        createSinusBlocks(audioarr,0,len(audioarr),sr,hlabsBlocks,rawAmplitudes)
+        createSinusBlocks(audioarr,0,len(audioarr),sr,hlabsBlocks,rawAmplitudes,frequencies)
 
 
     else:
         if breaklist[0][0] == 0:
             hlabsBlocks.append(HlabsBlock(HlabsType.BREAK, audioarr, 0, breaklist[0][1]))
         else:
-            createSinusBlocks(audioarr,0,breaklist[0][0],sr,hlabsBlocks,rawAmplitudes)
+            createSinusBlocks(audioarr,0,breaklist[0][0],sr,hlabsBlocks,rawAmplitudes,frequencies)
             hlabsBlocks.append(HlabsBlock(HlabsType.BREAK, audioarr, breaklist[0][0], breaklist[0][1]))
 
         for i in range(1,len(breaklist)):
-            createSinusBlocks(audioarr,breaklist[i-1][1],breaklist[i][0],sr,hlabsBlocks,rawAmplitudes)
+            createSinusBlocks(audioarr,breaklist[i-1][1],breaklist[i][0],sr,hlabsBlocks,rawAmplitudes,frequencies)
             hlabsBlocks.append(HlabsBlock(HlabsType.BREAK, audioarr, breaklist[i][0], breaklist[i][1]))
 
 
         #last block
         if(breaklist[-1][1] != len(audioarr)-1):
-            createSinusBlocks(audioarr,breaklist[-1][1],len(audioarr),sr,hlabsBlocks,rawAmplitudes)
+            createSinusBlocks(audioarr,breaklist[-1][1],len(audioarr),sr,hlabsBlocks,rawAmplitudes,frequencies)
 
     #Block amplitudes and frequencies
     for block in hlabsBlocks:

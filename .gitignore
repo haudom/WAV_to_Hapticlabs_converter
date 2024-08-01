@@ -5,4 +5,5 @@
 /src/.ipynb_checkpoints/
 /src/__pycache__/
 /src/local_tests/
+/src/temp/
 *.zip
