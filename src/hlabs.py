@@ -70,7 +70,7 @@ class HlabsBlock:
         if self.type == HlabsType.BREAK:
             block["type"] = "p"
             block["data"] = {
-                "dur" : self.duration,
+                "dur" : round(self.duration,2),
             }
         if self.type == HlabsType.SINUS:
             block["type"] = "v"
