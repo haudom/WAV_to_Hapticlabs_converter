@@ -75,10 +75,10 @@ class HlabsBlock:
         if self.type == HlabsType.SINUS:
             block["type"] = "v"
             block["data"] = {
-                "amp" : self.amplitude.item(),
-                "freq" : self.frequency.item(),
+                "amp" : round(self.amplitude.item(),3),
+                "freq" : round(self.frequency.item(),1),
                 "form" : "sine",
-                "dur" : self.duration,
+                "dur" : round(self.duration,2),
                 
             }
         return block
