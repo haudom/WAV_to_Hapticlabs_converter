@@ -57,7 +57,8 @@ def findBreaks(audio_arr, sr):
   index = -1
 
 # Einstellbare Parameter
-  minBreakTime = minBreakDistance = sr / 40 #in samples #eine Pause muss mindestens eine 40 hz Periode lang sein
+  minBreakTime = sr / 40#in samples #eine Pause muss mindestens eine 40 hz Periode lang sein
+  minBreakDistance = sr/300
   toleranz = 0.007 # Amplituden toleranz zwischen 0 und 1 (welsche Werte werden nicht berücksichtigt/als Pause bewertet)
 ##
 
@@ -71,13 +72,13 @@ def findBreaks(audio_arr, sr):
     else:
       if i - index >= minBreakTime and index != -1:
         #Wenn Zeit zwischen Pausen kleiner als Tolleranz dann die letzte Pause verlängern statt neue zu erstellen
-        if len(breaksList) > 0 and breaksList[-1][1] >= index - minBreakTime:
+        if len(breaksList) > 0 and breaksList[-1][1] >= index - minBreakDistance:
           breaksList[-1][1] = i
         else:
           breaksList.append([index,i])
       index = -1
   # --Wenn Zeit bis endesignal kleinder ist als Mindespausenlänge, letzte Pause verlängern
-  if len(breaksList) > 0 and len(audio_arr) - breaksList[-1][1] < minBreakTime:
+  if len(breaksList) > 0 and len(audio_arr) - breaksList[-1][1] < minBreakDistance:
     breaksList[-1][1] = len(audio_arr)-1
   # elif(len(audio_arr) - index > minBreakTime and index != -1):  
   # #Wenn Zeit/ Abstand zwischen Pausen kleiner als Mindestabstand dann die letzte Pause verlängern statt neue zu erstellen
@@ -655,7 +656,7 @@ def blockMeanAmplitude(inrterpolatedAmplitudes, block):
   return rms(inrterpolatedAmplitudes[block[0]:block[1]])
 
 
-#audio_arr, sr = openFile(r"viblib\v-09-10-3-52.wav")
+#audio_arr, sr = openFile(r"viblib\v-10-21-3-33.wav")
 # print("sample rate: ", sr)
 #breaks_list = findBreaks(audio_arr=audio_arr, sr=sr)
 #print(breaks_list)
