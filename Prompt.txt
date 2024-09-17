@@ -1,0 +1,482 @@
+{
+   "v-09-09-8-11":[
+      "\n## sensation:\nsimple,discontinuous,soft,grainy,short\n## emotion:\ncomfortable,calm,natural,familiar,pleasant,boring,predictable\n## metaphors:\nhearbeat,pulsing,tapping,poking\n## usage examples:\nconfirmation,get ready,milestone,reminder,battery low,incoming msg,pause,resume\n",
+      "Create a vibrotactile pattern that feels simple and discontinuous, with a soft, grainy texture and short duration. The pattern should evoke emotions of comfort, calm, and a natural, familiar sensation that is pleasant but potentially boring and predictable. It should resemble a heartbeat, pulsing, tapping, or gentle poking. This pattern could be used for scenarios like providing a confirmation, signaling to get ready, marking a milestone, reminding of something, indicating low battery, notifying of an incoming message, or prompting to pause or resume an activity."
+   ],
+   "v-09-09-8-20":[
+      "\n## sensation:\nsmooth,simple,regular,bumpy,discontinuous,soft,long\n## emotion:\nlively,pleasant,calm,natural,familiar,comfortable,rhythmic\n## metaphors:\nhearbeat,tapping,animal\n## usage examples:\none minute left,running out of time,get ready,above intended threshold,below intended threshold,reminder,warning\n",
+      "Generate a vibrotactile pattern that is smooth, simple, and regular with a bumpy, discontinuous texture that is soft but lasts long. The pattern should evoke a lively yet calm and pleasant emotion, feeling natural, familiar, comfortable, and rhythmic. It should metaphorically resemble a heartbeat, gentle tapping, or the presence of an animal. This pattern could be used to signal when there is one minute left, running out of time, to get ready, when something is above or below the intended threshold, as a reminder, or as a warning."
+   ],
+   "v-09-09-8-24":[
+      "\n## sensation:\nramping up,dynamic,grainy,smooth transition,complex,long\n## emotion:\nannoying,predictable,agitating,mechanical,uncomfortable\n## metaphors:\nengine,coming or going\n## usage examples:\nalarm,get ready,warmup\n",
+      "Design a vibrotactile pattern that ramps up dynamically with a grainy texture and a smooth transition, maintaining a complex and long-lasting sensation. This pattern should evoke emotions of annoyance, predictability, agitation, and discomfort, with a mechanical feel. It should metaphorically resemble the sound of an engine starting or the sensation of something coming or going. Use this pattern for scenarios like an alarm, getting ready, or during a warmup phase."
+   ],
+   "v-09-10-11-55":[
+      "\n## sensation:\ndynamic,discontinuous,rough,ramping up,long,complex\n## emotion:\nuncomfortable,surprising,annoying,mechanical,urgent,lively\n## metaphors:\nalarm,jumping,sliding,phone\n## usage examples:\novertime,below intended threshold,above intended threshold,finish,alarm,slow down,warmup,cooldown\n",
+      "Create a vibrotactile pattern that is dynamic, discontinuous, and rough, with a ramping-up sensation that is long and complex. The pattern should evoke emotions of discomfort, surprise, annoyance, and urgency, with a lively and mechanical feel. It should metaphorically resemble an alarm, the sensation of jumping or sliding, or the vibration of a phone. This pattern is suitable for use in scenarios such as signaling overtime, indicating that something is below or above the intended threshold, marking a finish, setting off an alarm, prompting to slow down, or during a warmup or cooldown."
+   ],
+   "v-09-10-11-58":[
+      "\n## sensation:\ncontinuous,regular,long,soft,ramping up,changing\n## emotion:\nnatural,boring,predictable,annoying,unpleasant\n## metaphors:\npurring,snoring,animal,coming or going\n## usage examples:\nincoming msg,pause,overtime,slow down,warning\n",
+      "Generate a continuous, regular, long, soft vibrotactile pattern that ramps up and is constantly changing, evoking a natural but boring, predictable, annoying, and unpleasant feeling, like the purring or snoring of an animal coming or going, to signal an incoming message, a pause, overtime, the need to slow down, or a warning."
+   ],
+   "v-09-10-12-11":[
+      "\n## sensation:\nrough,regular,discontinuous,long,grainy\n## emotion:\nannoying,angry,uncomfortable,urgent,agitating\n## metaphors:\nalarm,electric shock\n## usage examples:\novertime,alarm,finish,below intended threshold\n",
+      "Create a rough, regular, discontinuous, and long vibrotactile pattern with a grainy texture, evoking an annoying, angry, uncomfortable, urgent, and agitating feeling, similar to an alarm or an electric shock, to signal overtime, an alarm, the need to finish something, or when something falls below the intended threshold."
+   ],
+   "v-09-10-12-13":[
+      "\n## sensation:\nrough,bumpy,discontinuous,long,regular\n## emotion:\nurgent,lively,angry,energetic,rhythmic\n## metaphors:\nalarm,tapping,musical instruments,drums,beep,phone,celebration\n## usage examples:\nrunning out of time,alarm,overtime,finish,warning,above intended threshold,below intended threshold\n",
+      "Generate a rough, bumpy, discontinuous, long, and regular vibrotactile pattern that feels urgent, lively, angry, energetic, and rhythmic, like an alarm, tapping, musical instruments, drums, a beep, a phone, or a celebration, to signal running out of time, an alarm, overtime, the need to finish something, a warning, exceeding the intended threshold, or falling below the intended threshold."
+   ],
+   "v-09-10-12-16":[
+      "\n## sensation:\ndiscontinuous,dynamic,regular,grainy\n## emotion:\npredictable,urgent,annoying,mechanical,familiar\n## metaphors:\nmusical instruments,beep\n## usage examples:\none minute left,running out of time,overtime,finish,alarm,warning,battery low\n",
+      "Design a discontinuous, dynamic, regular, and grainy vibrotactile pattern that evokes a predictable, urgent, annoying, mechanical, and familiar feeling, similar to musical instruments or a beep, to signal that one minute is left, time is running out, overtime is occurring, the need to finish something, an alarm, a warning, or a low battery."
+   ],
+   "v-09-10-12-2":[
+      "\n## sensation:\nregular,smooth,discontinuous,bumpy,soft\n## emotion:\ncomfortable,pleasant,boring,predictable,calm\n## metaphors:\nsnoring,buzz\n## usage examples:\nspeed up,reminder,encouragement,above intended threshold,below intended threshold,start,running out of time,one minute left,finish,overtime,alarm,resume,halfway\n",
+      "Generate a regular, smooth, discontinuous, bumpy, and soft vibrotactile pattern that elicits a comfortable, pleasant, boring, predictable, and calm feeling, reminiscent of snoring or a buzz, to signal the need to speed up, serve as a reminder or encouragement, indicate exceeding or falling below the intended threshold, mark the start of something, signal running out of time, indicate one minute left, the need to finish something, overtime, an alarm, a resume, or reaching the halfway point."
+   ],
+   "v-09-10-12-6":[
+      "\n## sensation:\nlong,flat,simple,regular,discontinuous,smooth,ramping down\n## emotion:\nboring,predictable,calm,mechanical,sad\n## metaphors:\nsnoring,bell,walking,alarm,coming or going\n## usage examples:\nslow down,get ready,below intended threshold,finish\n",
+      "First, generate a long, flat, simple, and regular vibrotactile pattern.Make this pattern discontinuous and smooth, with a ramping-down sensation.This pattern should evoke a boring, predictable, calm, mechanical, and sad feeling, similar to snoring, a bell, walking, or an alarm that is coming or going.Finally, use this pattern to signal the need to slow down, get ready, falling below the intended threshold, or finishing something."
+   ],
+   "v-09-10-12-9":[
+      "\n## sensation:\nrough,spiky,discontinuous,dynamic,regular\n## emotion:\nagitating,mechanical,annoying,angry\n## metaphors:\ntapping,alarm,musical instruments,drums,animal\n## usage examples:\nspeed up,alarm,reminder,above intended threshold\n",
+      "Begin by creating a rough and spiky vibrotactile pattern.Make this pattern discontinuous, dynamic, and regular. This pattern should evoke an agitating, mechanical, annoying, and angry feeling, similar to tapping, an alarm, musical instruments, drums, or an agitated animal. Finally, use this pattern to signal the need to speed up, indicate an alarm, serve as a reminder, or signal exceeding the intended threshold."
+   ],
+   "v-09-10-3-52":[
+      "\n## sensation:\nregular,spiky,discontinuous,simple,bumpy\n## emotion:\nrhythmic,energetic,attention-getting,interesting,lively,pleasant,unique,happy\n## metaphors:\ntapping,morse code,phone,alarm\n## usage examples:\nreminder,get ready,halfway,milestone,encouragement,warning,above intended threshold,below intended threshold,speed up,interval/rep,warmup,one minute left,running out of time,start,alarm,overtime\n",
+      "Design a vibrotactile pattern that is regular, spiky, discontinuous, simple, and bumpy. This pattern should evoke a rhythmic, energetic, attention-getting, interesting, lively, pleasant, unique, and happy feeling, similar to tapping, Morse code, a phone, or an alarm. Use this pattern to signal a reminder, indicate it's time to get ready, mark a halfway point or milestone, offer encouragement, serve as a warning, signal exceeding or falling below the intended threshold, prompt the user to speed up, indicate an interval or repetition, signify a warmup phase, alert the user that one minute is left, signal running out of time, mark the start of something, act as an alarm, or indicate overtime."
+   ],
+   "v-09-10-3-56":[
+      "\n## sensation:\ngrainy,rough,discontinuous,spiky,short\n## emotion:\nagitating,mechanical,urgent,annoying,lively,unique\n## metaphors:\ngun\n## usage examples:\nalarm,finish,one minute left,above intended threshold,incoming msg,running out of time\n",
+      "Craft a short vibrotactile pattern that is grainy, rough, discontinuous, and spiky. This pattern should evoke an agitating, mechanical, urgent, annoying, lively, and unique feeling, similar to the sound of a gun. Use this pattern to signal an alarm, indicate the need to finish something, alert the user that one minute is left, signal exceeding the intended threshold, announce an incoming message, or warn the user that time is running out."
+   ],
+   "v-09-10-4-2":[
+      "\n## sensation:\ndynamic,regular,grainy,rough\n## emotion:\nurgent\n## metaphors:\ntapping,pulsing\n## usage examples:\nspeed up,running out of time,overtime,finish,encouragement,warning,one minute left\n",
+      "Generate a dynamic, regular, grainy, and rough vibrotactile pattern. This pattern should convey a sense of urgency. Think of sensations like tapping or a pulsing rhythm. Use this pattern to signal the need to speed up, indicate running out of time, mark overtime, prompt the user to finish something, offer encouragement, serve as a warning, or alert the user that one minute is left."
+   ],
+   "v-09-10-4-20":[
+      "\n## sensation:\nregular,smooth,discontinuous,soft\n## emotion:\ncalm,comfortable,natural,predictable,familiar\n## metaphors:\nhearbeat,pawing,animal,tapping\n## usage examples:\nreminder,battery low,slow down\n",
+      "Create a regular, smooth, discontinuous, and soft vibrotactile pattern. This pattern should evoke a calm, comfortable, natural, predictable, and familiar feeling, reminiscent of a heartbeat, pawing, an animal, or gentle tapping. Use this pattern to signal a reminder, indicate a low battery, or prompt the user to slow down."
+   ],
+   "v-09-10-4-23":[
+      "\n## sensation:\nregular,discontinuous,smooth,soft,long\n## emotion:\ncalm,pleasant,familiar,comfortable\n## metaphors:\nhearbeat,tapping,pawing,clock\n## usage examples:\n\n",
+      "Generate a regular, discontinuous, smooth, soft, and long vibrotactile pattern that evokes a calm, pleasant, familiar, and comfortable feeling, reminiscent of a heartbeat, tapping, pawing, or a clock."
+   ],
+   "v-09-10-4-25":[
+      "\n## sensation:\ndynamic,discontinuous,ramping up,spiky,rough,complex\n## emotion:\nurgent,agitating,comfortable,natural,familiar,interesting,unique\n## metaphors:\nengine,hearbeat,tapping\n## usage examples:\nspeed up,running out of time,warmup\n",
+      "Generate a dynamic, discontinuous, ramping up, spiky, rough, and complex vibrotactile pattern that evokes an urgent, agitating, comfortable, natural, familiar, interesting, and unique feeling, reminiscent of an engine, heartbeat, or tapping, to signal the need to speed up, running out of time, or a warmup phase."
+   ],
+   "v-09-10-4-6":[
+      "\n## sensation:\ngrainy,discontinuous,regular,dynamic,ramping up\n## emotion:\ninteresting,pleasant,energetic,attention-catching,comfortable,happy,surprising,lively\n## metaphors:\ntapping,coming or going,animal\n## usage examples:\nencouragement,one minute left,running out of time,speed up,warning\n",
+      "Generate a grainy, discontinuous, regular, dynamic, and ramping up vibrotactile pattern that evokes an interesting, pleasant, energetic, attention-catching, comfortable, happy, surprising, and lively feeling, reminiscent of tapping, something coming or going, or an animal, to signal encouragement, one minute left, running out of time, the need to speed up, or a warning."
+   ],
+   "v-09-10-6-16":[
+      "\n## sensation:\nregular,discontinuous,dynamic,bumpy,smooth,soft\n## emotion:\nmechanical,rhythmic\n## metaphors:\ntapping,beep,hearbeat\n## usage examples:\novertime,speed up,alarm\n",
+      "Generate a vibrotactile pattern that feels regular and discontinuous, creating a sensation that is both bumpy and smooth at the same time. The pattern should evoke a mechanical and rhythmic emotion, similar to a tapping sound or a beep. It could be used to represent the concept of overtime, or perhaps to simulate the feeling of something speeding up, like an alarm clock that vibrates with increasing intensity."
+   ],
+   "v-09-10-6-22":[
+      "\n## sensation:\ncontinuous,grainy,complex,dynamic,smooth,bumpy,soft\n## emotion:\nboring,predictable,annoying,mechanical,comfortable,pleasant,strange\n## metaphors:\ngun,electric shock,engine,riding\n## usage examples:\nrunning out of time,overtime,one minute left,alarm,get ready,incoming msg\n",
+      "Create a vibrotactile pattern that is continuous and grainy, yet also complex and dynamic, blending smooth and bumpy sensations with a soft touch. This pattern should evoke a range of emotions, from boring and predictable to slightly annoying and mechanical, but also comfortable, pleasant, and even strangely intriguing. Imagine the feeling of a gun recoil, a mild electric shock, or a gentle engine vibration, perhaps like the sensation of riding on a smooth surface that occasionally becomes bumpy. This pattern could be used to signal running out of time or entering overtime, counting down the last minute, acting as an alarm, a \"get ready\" cue, or notifying the user of an incoming message."
+   ],
+   "v-09-10-6-27":[
+      "\n## sensation:\nrough,regular,discontinuous,spiky,firm\n## emotion:\nagitating,urgent,angry,fear,uncomfortable,annoying,mechanical\n## metaphors:\ntapping,beep,alarm,musical instruments,drums\n## usage examples:\nspeed up,alarm,above intended threshold,below intended threshold,finish,running out of time,overtime,warning\n",
+      "Design a vibrotactile pattern that is rough, regular, and discontinuous, creating a spiky and firm sensation. The pattern should evoke feelings of agitation, urgency, anger, and even a touch of fear or discomfort. It should be perceived as annoying and mechanical, similar to a persistent tapping or a repetitive beep, like a harsh alarm clock or the rhythmic beat of certain musical instruments, perhaps even drums. This vibrotactile pattern could be used to signal the need to speed up, act as an alarm, indicate that a threshold has been crossed (either above or below the intended level), signify the approaching finish line, warn of running out of time or entering overtime, or serve as a general warning signal."
+   ],
+   "v-09-10-6-38":[
+      "\n## sensation:\nramping up,continuous,simple,smooth transition\n## emotion:\nmechanical,urgent\n## metaphors:\ngetting close,engine\n## usage examples:\nspeed up,alarm,warmup\n",
+      "Develop a vibrotactile pattern characterized by a ramping up sensation that is continuous and simple, featuring a smooth transition. The pattern should evoke a sense of urgency and have a mechanical feel, similar to the increasing intensity of an engine as it accelerates or the feeling of getting closer to something. It could be used to encourage the user to speed up, function as an alarm, or even serve as a warmup signal, gradually preparing them for an upcoming action or event."
+   ],
+   "v-09-10-6-43":[
+      "\n## sensation:\nsmooth,bumpy,soft,discontinuous,dynamic,wavy\n## emotion:\ncalm,comfortable,funny,natural,pleasant,lively,happy\n## metaphors:\npulsing,game,tapping,snoring,sliding\n## usage examples:\nhalfway,get ready,milestone,resume,interval/rep,warmup,cooldown,warning,reminder\n",
+      "Generate a vibrotactile pattern that feels smooth and bumpy at the same time, with a soft touch and a discontinuous, dynamic, wavy quality. The pattern should evoke a range of positive emotions, including calmness, comfort, amusement, naturalness, pleasantness, liveliness, and happiness. Imagine a gentle pulsing sensation, reminiscent of a playful game, a light tapping, the soft rhythm of snoring, or the feeling of smoothly sliding over a slightly uneven surface. This versatile pattern could be used to signal reaching the halfway point, a \"get ready\" cue, achieving a milestone, resuming an activity, marking intervals or repetitions, serving as a warmup or cooldown signal, providing a friendly warning, or acting as a gentle reminder."
+   ],
+   "v-09-10-6-46":[
+      "\n## sensation:\ndiscontinuous,complex,smooth,continuous,soft,dynamic\n## emotion:\nunique,interesting,comfortable,strange,surprising\n## metaphors:\n\n## usage examples:\nbattery low,encouragement,milestone,reminder,warning,get ready,resume,pause\n",
+      "Create a vibrotactile pattern that is both discontinuous and continuous, blending complexity with smoothness and a soft, dynamic feel. The pattern should evoke a sense of uniqueness and intrigue, making it interesting, comfortable, and perhaps even a little strange and surprising. While it doesn't rely on specific metaphors, its unique combination of sensations should be memorable and meaningful. Consider using this pattern to signal a low battery, offer encouragement, mark a milestone, deliver a reminder or warning, provide a \"get ready\" cue, indicate the resumption or pausing of an activity."
+   ],
+   "v-09-10-6-5":[
+      "\n## sensation:\ndiscontinuous,simple,bumpy,spiky,firm\n## emotion:\nurgent,lively,interesting,calm,rhythmic\n## metaphors:\ntapping,musical instruments,drums,hearbeat,clock\n## usage examples:\none minute left,interval/rep,get ready,warning,battery low,reminder\n",
+      "Design a vibrotactile pattern that is discontinuous and simple, with a bumpy, spiky, and firm feel. This pattern should evoke a sense of urgency, liveliness, and interest, while also maintaining a calm, rhythmic quality. Imagine the sensation of a rhythmic tapping, similar to the beat of certain musical instruments like drums, or perhaps a steady heartbeat or the ticking of a clock. This pattern could be used to signal that one minute is left, mark intervals or repetitions during a workout, provide a \"get ready\" cue, offer a warning, indicate a low battery, or serve as a subtle reminder."
+   ],
+   "v-09-10-6-59":[
+      "\n## sensation:\ngrainy,irregular,dynamic\n## emotion:\nboring,predictable,mechanical,fear\n## metaphors:\nengine,buzz,animal,riding,shaking\n## usage examples:\nbattery low,warning,start,reminder,warmup,cooldown\n",
+      "Develop a vibrotactile pattern characterized by a grainy, irregular, and dynamic sensation. This pattern should evoke a sense of boredom and predictability, alongside a mechanical feel and a touch of fear. Imagine the inconsistent vibrations of a sputtering engine, a persistent buzzing sound, the unpredictable movements of an animal, the bumpy feeling of riding on a rough surface, or an unsettling shaking sensation. This pattern could be used to indicate a low battery, deliver a warning, signal the start of something, serve as a reminder, or even function as a warmup or cooldown cue with its varying intensity."
+   ],
+   "v-09-10-7-34":[
+      "\n## sensation:\ndiscontinuous,regular,bumpy,simple\n## emotion:\ncalm,energetic,interesting,lively,natural,predictable,familiar\n## metaphors:\ntapping,poking,hearbeat\n## usage examples:\ninterval/rep,warmup,cooldown,reminder,warning,speed up,below intended threshold,milestone,encouragement,confirmation,incoming msg,resume,get ready\n",
+      "Create a vibration that is discontinuous and regular, with a bumpy yet simple feel. This vibration should evoke a sense of calmness and energy, making it both interesting and lively, while also feeling natural, predictable, and familiar. Imagine a gentle tapping sensation, like someone playfully poking you, or the steady rhythm of a heartbeat. This versatile vibration could be used to mark intervals or repetitions during a workout, serve as a warmup or cooldown cue, provide a reminder or warning, encourage the user to speed up, signal that a value is below the intended threshold, celebrate a milestone, offer encouragement, confirm an action, notify the user of an incoming message, indicate the resumption of an activity, or provide a \"get ready\" cue."
+   ],
+   "v-09-10-7-36":[
+      "\n## sensation:\nshort,continuous,ramping up,simple,rough,regular,round\n## emotion:\npredictable,mechanical,urgent,agitating,familiar,lively\n## metaphors:\nbuzz,animal,coming or going,bell\n## usage examples:\none minute left,finish,running out of time,warning,alarm,interval/rep,encouragement,resume,milestone\n",
+      "Design a short, continuous vibration that features a ramping up sensation, maintaining a simple, rough, regular, and round quality. This vibration should feel predictable and mechanical, yet also convey a sense of urgency and agitation, while remaining familiar and lively. Imagine a buzzing sound that gradually increases in intensity, the approaching or receding sound of an animal, or the escalating ringing of a bell. This vibration could be used to signal that one minute is left, indicate the finish line or that time is running out, provide a warning or alarm, mark intervals or repetitions, offer encouragement, cue the resumption of an activity, or celebrate the achievement of a milestone."
+   ],
+   "v-09-10-7-9":[
+      "\n## sensation:\nregular,discontinuous,simple,grainy,spiky\n## emotion:\npleasant,calm,familiar,mechanical,boring,predictable\n## metaphors:\ntapping\n## usage examples:\nhalfway,reminder,milestone,one minute left,resume,warning,pause,get ready\n",
+      "Develop a vibrotactile pattern that is regular and discontinuous, with a simple, grainy, and slightly spiky texture. This pattern should evoke a sense of pleasantness and calmness, feeling familiar, mechanical, and perhaps even a bit boring and predictable. Imagine a light, consistent tapping sensation, like a subtle reminder or a gentle nudge. This pattern could be used to signal reaching the halfway point, provide a reminder, mark a milestone, indicate that one minute is left, cue the resumption of an activity, offer a subtle warning, signal a pause, or function as a \"get ready\" cue."
+   ],
+   "v-09-10-8-5":[
+      "\n## sensation:\ndiscontinuous,irregular,bumpy,dynamic\n## emotion:\nlively,comfortable,happy,interesting\n## metaphors:\ngame,poking,alarm\n## usage examples:\nbattery low,incoming msg,speed up,reminder,resume,overtime\n",
+      "Generate a vibrotactile pattern that is discontinuous and irregular, featuring a bumpy, dynamic feel. This pattern should evoke a sense of liveliness, comfort, happiness, and intrigue. Imagine a playful game with unpredictable tactile feedback, like someone playfully poking you at different intervals, or a quirky, non-intrusive alarm. This pattern could be used to signal a low battery, notify the user of an incoming message, encourage them to speed up, provide a friendly reminder, cue the resumption of an activity, or indicate the start of overtime."
+   ],
+   "v-09-10-8-7":[
+      "\n## sensation:\ndiscontinuous,bumpy,regular,soft,short,simple\n## emotion:\nlively,happy,rhythmic,interesting,pleasant,comfortable,energetic,natural,familiar\n## metaphors:\ngame,pulsing,poking,tapping,buzz\n## usage examples:\nmilestone,encouragement,one minute left,running out of time,finish,overtime,warning,alarm,below intended threshold,above intended threshold,speed up,warmup,cooldown,interval/rep,get ready,reminder\n",
+      "Create a vibration that is discontinuous, bumpy, and regular, with a soft, short, and simple feel. This vibration should evoke a sense of liveliness and happiness, with a rhythmic, interesting, and pleasant quality that feels both comfortable, energetic, natural, and familiar. Imagine a playful game with gentle tactile feedback, a subtle pulsing sensation, light poking, a soft tapping, or a brief, gentle buzz. This versatile vibration could be used to celebrate a milestone, offer encouragement, signal that one minute is left or that time is running out, indicate the finish line or the start of overtime, provide a warning or alarm, indicate that a value is below or above the intended threshold, encourage the user to speed up, serve as a warmup or cooldown cue, mark intervals or repetitions during a workout, provide a \"get ready\" cue, or function as a friendly reminder."
+   ],
+   "v-09-11-3-12":[
+      "\n## sensation:\nregular,discontinuous,spiky\n## emotion:\nurgent,mechanical,lively,rhythmic\n## metaphors:\nalarm,phone,SOS\n## usage examples:\novertime,running out of time,alarm,speed up,warning,encouragement\n",
+      "Design a vibrotactile pattern that is regular, discontinuous, and spiky. This pattern should evoke a sense of urgency and have a mechanical feel, while also being lively and rhythmic. Imagine the insistent vibrations of an alarm clock, the distinct vibration pattern of a phone notification, or even the urgency of an SOS signal. This pattern could be used to signal the start of overtime, indicate that time is running out, function as an alarm, encourage the user to speed up, provide a warning, or offer a burst of encouragement when needed."
+   ],
+   "v-09-11-3-16":[
+      "\n## sensation:\ndynamic,rough,continuous,irregular,bumpy\n## emotion:\nannoying,urgent,agitating,mechanical,angry,surprising,interesting,rhythmic\n## metaphors:\nalarm,phone,musical instruments,drums\n## usage examples:\nrunning out of time,finish,overtime,alarm,one minute left,warmup,cooldownwarm up/cool down,milestone\n",
+      "Develop a vibrotactile pattern that is dynamic, rough, and continuous, with an irregular and bumpy texture. This pattern should evoke a range of emotions, from annoyance and urgency to agitation and even anger, while also possessing a mechanical, surprising, interesting, and rhythmic quality. Imagine the jarring vibrations of a persistent alarm, the chaotic vibration of a phone in a noisy environment, the complex rhythms of certain musical instruments, or the powerful beats of drums. This pattern could be used to signal that time is running out, indicate the finish line or the start of overtime, function as an alarm, announce that one minute is left, serve as a unique warmup or cooldown cue, or mark the achievement of a significant milestone."
+   ],
+   "v-09-11-3-19":[
+      "\n## sensation:\nirregular,discontinuous,complex,dynamic,smooth,ticklish,firm\n## emotion:\nurgent,lively,unique,rhythmic,agitating,surprising,uncomfortable\n## metaphors:\nmorse code,horn,game,phone,alarm\n## usage examples:\none minute left,running out of time,above intended threshold,speed up,warning,alarm,last one,almost done\n",
+      "Create a vibration that is irregular, discontinuous, and complex, featuring a dynamic yet smooth texture with a ticklish, firm feel. This vibration should evoke a sense of urgency and liveliness, while also feeling unique, rhythmic, and potentially agitating, surprising, and even slightly uncomfortable. Imagine the intricate patterns of Morse code, the intermittent blasts of a horn, the unpredictable feedback of a tactile game, the varied vibrations of a phone notification, or the startling pulses of an alarm clock. This distinct vibration could be used to signal that one minute is left or that time is running out, indicate that a value is above the intended threshold, encourage the user to speed up, provide a warning or alarm, emphasize that something is the \"last one,\" or create a sense of anticipation for being \"almost done.\""
+   ],
+   "v-09-11-3-21":[
+      "\n## sensation:\ndiscontinuous,bumpy,spiky,simple,short,firm\n## emotion:\nrhythmic,energetic,comfortable,mechanical\n## metaphors:\nhearbeat,phone\n## usage examples:\novertime,finish,alarm,running out of time,above intended threshold,below intended threshold,encouragement,get ready,reminder,confirmation,milestone\n",
+      "Design a vibrotactile pattern that is discontinuous, bumpy, and spiky, with a simple, short, and firm feel. This pattern should evoke a sense of rhythm and energy, while also being comfortable and mechanical. Imagine the distinct pulsing of a heartbeat or the quick, sharp vibration of a phone notification. This pattern could be used to signal the start of overtime, indicate the finish line, function as an alarm, warn that time is running out, indicate that a value is above or below the intended threshold, offer encouragement, provide a \"get ready\" cue, serve as a reminder, confirm an action, or celebrate the achievement of a milestone."
+   ],
+   "v-09-11-3-24":[
+      "\n## sensation:\nsmooth,complex,dynamic,bumpy,irregular\n## emotion:\nunique,rhythmic,comfortable,happy,interesting,lively,pleasant\n## metaphors:\nengine\n## usage examples:\nencouragement,milestone,congratulations\n",
+      "Design a vibrotactile pattern that feels smooth, complex, dynamic, bumpy, and irregular, evoking a unique, rhythmic, comfortable, happy, interesting, lively, and pleasant sensation, like an engine, suitable for encouragement, milestones, or congratulations."
+   ],
+   "v-09-11-3-4":[
+      "\n## sensation:\ncontinuous,dynamic,ramping down,irregular,complex\n## emotion:\nunique,urgent,mechanical,surprising,strange\n## metaphors:\nalarm,engine\n## usage examples:\nrunning out of time,one minute left,encouragement,warning,reminder\n",
+      "Develop a continuous, dynamic, ramping down, irregular, and complex vibrotactile pattern that conveys a unique, urgent, mechanical, surprising, and strange feeling, reminiscent of an alarm or engine, suitable for scenarios like running out of time, having one minute left, encouragement, warnings, or reminders."
+   ],
+   "v-09-11-3-43":[
+      "\n## sensation:\ndynamic,complex,irregular\n## emotion:\nlively,rhythmic,unique,funny\n## metaphors:\ndancing,tapping,musical instruments\n## usage examples:\nget ready,encouragement\n",
+      "Create a dynamic, complex, and irregular vibrotactile pattern that feels lively, rhythmic, unique, and funny, like dancing, tapping, or musical instruments, and can be used for \"get ready\" or encouragement cues."
+   ],
+   "v-09-11-3-50":[
+      "\n## sensation:\nbumpy,discontinuous,regular\n## emotion:\nlively,rhythmic,mechanical\n## metaphors:\ngame,jumping\n## usage examples:\nreminder,one minute left,running out of time,warning,below intended threshold,get ready,interval/rep\n",
+      "Generate a bumpy, discontinuous, and regular vibration that evokes a lively, rhythmic, and mechanical sensation, similar to a game or jumping, and can be used for reminders, indicating one minute left, running out of time, warnings, being below an intended threshold, getting ready, or marking intervals/repetitions."
+   ],
+   "v-09-11-3-54":[
+      "\n## sensation:\nregular,bumpy,dynamic,discontinuous,smooth,soft\n## emotion:\ncalm,comfortable,familiar,happy,lively,interesting,pleasant,rhythmic,natural\n## metaphors:\nhearbeat,pulsing,tapping,clock,jumping\n## usage examples:\nbelow intended threshold,one minute left,speed up,warmup,cooldown,start,get ready,resume,pause,confirmation,warning,reminder,encouragement,battery low,milestone,interval/rep,cooldownwarm up/cool down,running out of time,incoming msg,overtime,slow down,alarm\n",
+      "Design a vibrotactile pattern that is regular, bumpy, dynamic, discontinuous, smooth, and soft, evoking a calm, comfortable, familiar, happy, lively, interesting, pleasant, rhythmic, and natural feeling, reminiscent of a heartbeat, pulsing, tapping, clock, or jumping. This versatile pattern can be used for various scenarios: indicating being below an intended threshold, signaling one minute left, prompting to speed up or slow down, guiding through warmup or cooldown phases, marking the start or resumption of an activity, pausing, confirming actions, issuing warnings or reminders, offering encouragement, notifying of low battery, celebrating milestones, setting intervals/repetitions, managing cooldown and warm-up periods, signaling running out of time, alerting to incoming messages, indicating overtime, and even serving as an alarm."
+   ],
+   "v-09-11-3-56":[
+      "\n## sensation:\nirregular,dynamic,discontinuous,complex,bumpy\n## emotion:\nunique,interesting,comfortable,lively,surprising,strange\n## metaphors:\n\n## usage examples:\nhalfway,encouragement,one minute left,warning,reminder\n",
+      "Develop a vibrotactile pattern that is irregular, dynamic, discontinuous, complex, and bumpy, creating a unique, interesting, comfortable, lively, surprising, and strange sensation, suitable for marking the halfway point, offering encouragement, signaling one minute left, issuing warnings, or providing reminders."
+   ],
+   "v-09-11-3-8":[
+      "\n## sensation:\nirregular,dynamic,grainy,discontinuous\n## emotion:\nfunny,unique,strange,comfortable,lively,natural\n## metaphors:\nengine\n## usage examples:\nincoming msg,speed up,warning,encouragement,milestone,one minute left,below intended threshold,above intended threshold,running out of time\n",
+      "Create a vibrotactile pattern that is irregular, dynamic, grainy, and discontinuous, conveying a funny, unique, strange, comfortable, lively, and natural feeling, similar to an engine. This pattern can be used for various notifications and feedback scenarios, including incoming messages, prompts to speed up, warnings, encouragement, milestone achievements, indicating one minute left, signaling being below or above an intended threshold, and alerting to running out of time."
+   ],
+   "v-09-11-4-1":[
+      "\n## sensation:\nirregular,complex,bumpy,dynamic,discontinuous,long\n## emotion:\nagitating,urgent,lively,energetic,rhythmic,comfortable,pleasant,interesting,unique\n## metaphors:\ntapping,musical instruments,drums,game\n## usage examples:\nencouragement,milestone,warning,alarm,get ready\n",
+      "Design a vibrotactile pattern that is irregular, complex, bumpy, dynamic, discontinuous, and long, evoking an agitating, urgent, lively, energetic, rhythmic, comfortable, pleasant, interesting, and unique sensation, reminiscent of tapping, musical instruments, drums, or a game. This pattern is well-suited for providing encouragement, celebrating milestones, issuing warnings, sounding alarms, or signaling to get ready."
+   ],
+   "v-09-11-4-12":[
+      "\n## sensation:\nrough,grainy,continuous,bumpy,simple\n## emotion:\npredictable,mechanical,comfortable,pleasant,familiar\n## metaphors:\nengine,bell,game,alarm\n## usage examples:\nfinish,overtime,alarm,reminder,milestone,resume\n",
+      "Develop a rough, grainy, continuous, bumpy, and simple vibrotactile pattern that feels predictable, mechanical, comfortable, pleasant, and familiar, similar to an engine, bell, game, or alarm. This pattern can be used to signal the finish, indicate overtime, function as an alarm or reminder, mark milestones, or prompt the resumption of an activity."
+   ],
+   "v-09-11-4-22":[
+      "\n## sensation:\nsimple,continuous,flat,regular,grainy,rough,long\n## emotion:\nboring,predictable,annoying,mechanical,happy,calm\n## metaphors:\nbuzz,celebration,horn,alarm\n## usage examples:\nwarmup,cooldown,interval/rep,get ready,incoming msg\n",
+      "Design a vibration that is simple, continuous, flat, regular, grainy, rough, and long, evoking a boring, predictable, annoying, mechanical, happy, and calm sensation, reminiscent of a buzz, celebration, horn, or alarm, suitable for use during warmups, cooldowns, intervals/reps, getting ready, or signaling incoming messages."
+   ],
+   "v-09-11-4-3":[
+      "\n## sensation:\ndiscontinuous,dynamic,bumpy,complex,springy\n## emotion:\nrhythmic,unique,lively,pleasant,happy,interesting,comfortable,energetic,attention-catching,funny,surprising\n## metaphors:\ntapping,morse code,riding,jumping\n## usage examples:\nabove intended threshold,speed up,start,one minute left,finish,running out of time,milestone,interval/rep,warmup,cooldown,below intended threshold,encouragement,reminder,warning,get ready\n",
+      "Create a discontinuous, dynamic, bumpy, complex, and springy vibrotactile pattern that feels rhythmic, unique, lively, pleasant, happy, interesting, comfortable, energetic, attention-catching, funny, and surprising, like tapping, Morse code, riding, or jumping, suitable for various use cases such as indicating being above an intended threshold, prompting to speed up, signaling the start or finish, marking one minute left or running out of time, celebrating milestones, setting intervals/reps, guiding warmups and cooldowns, indicating being below an intended threshold, offering encouragement or reminders, issuing warnings, and signaling to get ready."
+   ],
+   "v-09-11-4-41":[
+      "\n## sensation:\nramping down,discontinuous,long,bumpy\n## emotion:\ncalm,comfortable,familiar,sad,strange\n## metaphors:\ncoming or going,going away,riding,hearbeat\n## usage examples:\nbattery low,slow down,below intended threshold,cooldown\n",
+      "Design a ramping down, discontinuous, long, and bumpy vibrotactile pattern that evokes a calm, comfortable, familiar, sad, and strange feeling, reminiscent of something coming or going, going away, riding, or a heartbeat, suitable for scenarios like low battery warnings, prompts to slow down, indications of being below an intended threshold, or guiding cooldown phases."
+   ],
+   "v-09-11-4-54":[
+      "\n## sensation:\nbumpy,rough,discontinuous,dynamic,regular,loud\n## emotion:\nurgent,angry,mechanical,agitating,fear,annoying,salient,attention-getting\n## metaphors:\ntapping,alarm,pulsing,beep,poking,phone\n## usage examples:\nfinish,alarm,running out of time,overtime,above intended threshold,below intended threshold,warning\n",
+      "Develop a bumpy, rough, discontinuous, dynamic, regular, and loud vibrotactile pattern that feels urgent, angry, mechanical, agitating, fear-inducing, annoying, salient, and attention-getting, similar to tapping, an alarm, pulsing, beeping, poking, or a phone, suitable for signaling the finish, acting as an alarm, indicating running out of time or being in overtime, highlighting being above or below an intended threshold, and issuing warnings."
+   ],
+   "v-09-11-4-8":[
+      "\n## sensation:\nregular,discontinuous,simple,firm\n## emotion:\nrhythmic,familiar,boring,predictable,calm,mechanical\n## metaphors:\ntapping\n## usage examples:\nreminder,warning\n",
+      "Generate a vibrotactile pattern that feels regular, discontinuous, simple, and firm, evoking a sense of rhythm, familiarity, boredom, predictability, calmness, and a mechanical quality, reminiscent of tapping. This pattern could be used for reminders or warnings."
+   ],
+   "v-09-12-1-0":[
+      "\n## sensation:\ndiscontinuous,irregular,grainy\n## emotion:\ncomfortable,calm,strange\n## metaphors:\npoking,nature,animal\n## usage examples:\nbattery low,resume,pause,get ready\n",
+      "Create a vibrotactile pattern that is discontinuous and irregular with a grainy sensation, conveying a sense of comfort, calmness, and strangeness, like the poking of a natural element or an animal. This pattern would be suitable for notifications like low battery, resume, pause, or get ready."
+   ],
+   "v-09-12-1-19":[
+      "\n## sensation:\nshort,discontinuous,simple,rough\n## emotion:\npleasant,calm,comfortable,interesting\n## metaphors:\n\n## usage examples:\nconfirmation,reminder,get ready,pause,resume,one minute left,milestone,slow down,interval/rep\n",
+      "Design a vibrotactile pattern that is short, discontinuous, simple, and rough, producing a pleasant, calm, comfortable, and interesting sensation. This pattern could be used for various purposes, such as confirmations, reminders, get ready signals, pause/resume notifications, one-minute-left warnings, milestone markers, slow-down cues, or interval/rep counters."
+   ],
+   "v-09-12-1-23":[
+      "\n## sensation:\nshort,simple,continuous,smooth,soft\n## emotion:\ncomfortable,pleasant,calm\n## metaphors:\nbeep,game,poking\n## usage examples:\nmilestone,get ready,resume,pause,confirmation,battery low,incoming msg,warning,reminder,one minute left,halfway\n",
+      "Develop a short, simple, continuous, and smooth vibration with a soft quality that elicits a comfortable, pleasant, and calm feeling, similar to a gentle beep in a game or a light poking sensation. This vibration could be utilized for diverse applications, such as milestones, get ready signals, resume/pause functions, confirmations, low battery alerts, incoming messages, warnings, reminders, one-minute-left notifications, or halfway point indicators."
+   ],
+   "v-09-12-1-29":[
+      "\n## sensation:\nregular,short,discontinuous,soft\n## emotion:\npleasant,natural,comfortable,lively,familiar,happy,calm\n## metaphors:\nbeep,game,heartbeat,pawing,animal,musical instruments,drums,tapping\n## usage examples:\nconfirmation,milestone,get ready,incoming msg,battery low,reminder,resume,pause,one minute left,interval/rep,warmup,cooldown,warning\n",
+      "Generate a vibration that is regular, short, and discontinuous with a soft touch, creating a pleasant, natural, comfortable, lively, familiar, happy, and calm sensation, reminiscent of a beep in a game, a heartbeat, an animal pawing, a musical instrument like drums, or a gentle tapping. This vibration can be employed for various purposes, including confirmations, milestones, get ready cues, incoming messages, low battery alerts, reminders, resume/pause functionalities, one-minute-left warnings, interval/rep counters, warmup/cooldown phases, and general warnings."
+   ],
+   "v-09-12-1-39":[
+      "\n## sensation:\nsmooth,regular,ramping down,soft\n## emotion:\ncalm,pleasant,comfortable,natural\n## metaphors:\nmusical instruments,drums,echo,bell\n## usage examples:\nbattery low,interval/rep,warning,below intended threshold,get ready,resume,confirmation\n",
+      "Design a smooth and regular vibration with a soft, ramping-down effect that evokes a calm, pleasant, comfortable, and natural feeling, similar to the fading sound of a musical instrument like drums, an echo, or a bell. This vibration would be appropriate for notifications such as low battery, interval/rep markers, warnings, signals for falling below an intended threshold, get ready cues, resume commands, or confirmations."
+   ],
+   "v-09-12-1-48":[
+      "\n## sensation:\ndiscontinuous,bumpy,rough,regular\n## emotion:\nhappy,comfortable,rhythmic,agitating\n## metaphors:\ntapping,pulsing,beep\n## usage examples:\nspeed up,encouragement,milestone,running out of time,get ready,resume,warmup,cooldownwarm up/cool down,incoming msg\n",
+      "Create a discontinuous, bumpy, and rough vibration with a regular rhythm that evokes a happy, comfortable, rhythmic, and slightly agitating feeling, similar to tapping, pulsing, or a rapid beep. This vibration could be used for conveying a need to speed up, encouragement, milestone markers, running out of time alerts, get ready cues, resume commands, warmup/cooldown phases, or incoming message notifications."
+   ],
+   "v-09-12-1-53":[
+      "\n## sensation:\nregular,discontinuous,spiky\n## emotion:\nlively,agitating,urgent,happy,interesting\n## metaphors:\nhearbeat,musical instruments,drums\n## usage examples:\nrunning out of time,reminder,encouragement,above intended threshold,below intended threshold,milestone,warning,get ready,battery low\n",
+      "Develop a regular, discontinuous, and spiky vibration that delivers a lively, agitating, urgent, happy, and interesting sensation, reminiscent of a fast heartbeat or the sharp sounds of musical instruments like drums. This vibration would be suitable for scenarios such as running out of time warnings, reminders, encouragement, exceeding or falling below an intended threshold, milestones, general warnings, get ready cues, or low battery alerts."
+   ],
+   "v-09-12-2-17":[
+      "\n## sensation:\ndiscontinuous,grainy,regular,spiky,bumpy,simple\n## emotion:\nhappy,lively,energetic,comfortable,pleasant,mechanical,rhythmic\n## metaphors:\ngun,engine,animal\n## usage examples:\nmilestone,speed up,below intended threshold,get ready\n",
+      "Generate a discontinuous, grainy, regular, spiky, and bumpy vibration with a simple quality that creates a happy, lively, energetic, comfortable, pleasant, mechanical, and rhythmic sensation, similar to the feeling of a gun firing, an engine running, or an animal moving. This vibration could be used in a variety of applications where a unique and engaging tactile experience is desired, such as gaming feedback, interactive art installations, or haptic notifications for specific events or actions."
+   ],
+   "v-09-12-2-20":[
+      "\n## sensation:\nregular,discontinuous,spiky,bumpy\n## emotion:\nurgent,energetic,attention-catching,mechanical,agitating,rhythmic\n## metaphors:\ntapping,game\n## usage examples:\nspeed up,overtime,running out of time,one minute left,milestone,encouragement,reminder,warning,alarm,finish,get ready\n",
+      "## sensation: regular,discontinuous,spiky,bumpy ## emotion: urgent,energetic,attention-catching,mechanical,agitating,rhythmic ## metaphors: tapping,game ## usage examples: speed up,overtime,running out of time,one minute left,milestone,encouragement,reminder,warning,alarm,finish,get ready"
+   ],
+   "v-09-12-2-23":[
+      "\n## sensation:\ncontinuous,dynamic,smooth,wavy,soft\n## emotion:\nboring,predictable,pulsing,comfortable,pleasant\n## metaphors:\nalarm,beep,sliding,pawing,animal\n## usage examples:\nwarning,overtime,running out of time,reminder,encouragement,above intended threshold,remain constant (no faster/slower,no higher/lower threshold); countdown,incoming msg\n",
+      "## sensation: continuous,dynamic,smooth,wavy,soft ## emotion: boring,predictable,pulsing,comfortable,pleasant ## metaphors: alarm,beep,sliding,pawing,animal ## usage examples: warning,overtime,running out of time,reminder,encouragement,above intended threshold,remain constant (no faster/slower,no higher/lower threshold); countdown,incoming msg"
+   ],
+   "v-09-12-2-40":[
+      "\n## sensation:\nirregular,discontinuous,dynamic,spiky,complex,bumpy\n## emotion:\nunique,natural,strange\n## metaphors:\nwalking\n## usage examples:\n\n",
+      "## sensation:irregular,discontinuous,dynamic,spiky,complex,bumpy ## emotion: unique,natural,strange ## metaphors: walking"
+   ],
+   "v-09-12-8-10":[
+      "\n## sensation:\ndynamic,ramping up,continuous,rough,smooth transition,long\n## emotion:\nurgent,annoying,mechanical,angry\n## metaphors:\nengine,snoring,horn,animal\n## usage examples:\novertime,alarm,speed up,start,interval/rep\n",
+      "## sensation: dynamic,ramping up,continuous,rough,smooth transition,long ## emotion: urgent,annoying,mechanical,angry ## metaphors: engine,snoring,horn,animal ## usage examples: overtime,alarm,speed up,start,interval/rep"
+   ],
+   "v-09-12-8-13":[
+      "\n## sensation:\ncontinuous,ramping up,simple,smooth transition,long\n## emotion:\nmechanical,boring,predictable,familiar\n## metaphors:\nengine,buzz,animal,snoring\n## usage examples:\nfinish,overtime,get ready,resume,incoming msg,below intended threshold,halfway\n",
+      "## sensation: continuous,ramping up,simple,smooth transition,long ## emotion: mechanical,boring,predictable,familiar ## metaphors: engine,buzz,animal,snoring ## usage examples: finish,overtime,get ready,resume,incoming msg,below intended threshold,halfway"
+   ],
+   "v-09-12-8-21":[
+      "\n## sensation:\nshort,simple,continuous,firm,flat,smooth\n## emotion:\ncalm,comfortable,familiar,boring,predictable,sad,natural\n## metaphors:\ntapping,beep,clock,poking\n## usage examples:\nconfirmation,resume,pause,battery low,milestone,warning\n",
+      "## sensation: short,simple,continuous,firm,flat,smooth ## emotion: calm,comfortable,familiar,boring,predictable,sad,natural ## metaphors: tapping,beep,clock,poking ## usage examples: confirmation,resume,pause,battery low,milestone,warning"
+   ],
+   "v-09-12-8-27":[
+      "\n## sensation:\nsmooth,simple,continuous,flat,soft\n## emotion:\ncalm,comfortable,boring,predictable,natural\n## metaphors:\nbeep,bell,nature\n## usage examples:\nresume,confirmation\n",
+      "## sensation: smooth,simple,continuous,flat,soft ## emotion: calm,comfortable,boring,predictable,natural ## metaphors: beep,bell,nature ## usage examples: resume,confirmation"
+   ],
+   "v-09-12-8-30":[
+      "\n## sensation:\nshort,grainy,simple,flat\n## emotion:\ncreepy,calm,strange,boring\n## metaphors:\nanimal,snoring,nature\n## usage examples:\npause,incoming msg,interval/rep,no/not allowed (opposite of confirmation)\n",
+      "## sensation: short,grainy,simple,flat ## emotion: creepy,calm,strange,boring ## metaphors: animal,snoring,nature ## usage examples: pause,incoming msg,interval/rep,no/not allowed (opposite of confirmation)"
+   ],
+   "v-09-12-8-32":[
+      "\n## sensation:\ncontinuous,irregular,short,dynamic\n## emotion:\nsurprising,comfortable,mechanical,unique\n## metaphors:\nanimal\n## usage examples:\nfinish,milestone,reminder,confirmation\n",
+      "## sensation: continuous,irregular,short,dynamic ## emotion: surprising,comfortable,mechanical,unique ## metaphors: animal ## usage examples: finish,milestone,reminder,confirmation"
+   ],
+   "v-09-16-1-43":[
+      "\n## sensation:\nsimple,soft\n## emotion:\ncomfortable,familiar\n## metaphors:\nbeep\n## usage examples:\nconfirmation,battery low,resume,pause,interval/rep\n",
+      "## sensation: simple,soft ## emotion: comfortable,familiar ## metaphors: beep ## usage examples: confirmation,battery low,resume,pause,interval/rep"
+   ],
+   "v-09-16-1-56":[
+      "\n## sensation:\nramping up,dynamic,irregular,discontinuous\n## emotion:\nangry,surprising,annoying,agitating,strange,mechanical,uncomfortable,lively,fear\n## metaphors:\nalarm,coming or going,game,bell,horn,jumping\n## usage examples:\nwarning,alarm,overtime,running out of time,speed up,start,above intended threshold,below intended threshold,resume\n",
+      "## sensation: ramping up,dynamic,irregular,discontinuous ## emotion: angry,surprising,annoying,agitating,strange,mechanical,uncomfortable,lively,fear ## metaphors: alarm,coming or going,game,bell,horn,jumping ## usage examples: warning,alarm,overtime,running out of time,speed up,start,above intended threshold,below intended threshold,resume"
+   ],
+   "v-09-18-1-55":[
+      "\n## sensation:\nregular,spiky,discontinuous,simple\n## emotion:\ncalm,rhythmic,familiar,natural,predictable\n## metaphors:\nhearbeat,tapping\n## usage examples:\nhalfway,pause,battery low,get ready,warmup,cooldown\n",
+      "## sensation: regular,spiky,discontinuous,simple ## emotion: calm,rhythmic,familiar,natural,predictable ## metaphors: hearbeat,tapping ## usage examples: halfway,pause,battery low,get ready,warmup,cooldown"
+   ],
+   "v-09-18-2-7":[
+      "\n## sensation:\nirregular,rough,complex,dynamic,discontinuous,grainy\n## emotion:\nunique,surprising,urgent,agitating,interesting,mechanical,strange\n## metaphors:\nbeep\n## usage examples:\nrunning out of time,encouragement,alarm,warning,one minute left\n",
+      "Generate a discontinuous, grainy, and complex vibrotactile pattern with irregular and rough sensations that feels unique, surprising, urgent, agitating, interesting, mechanical, and strange, like a beep, to signal running out of time, as encouragement, as an alarm, as a warning, or to indicate one minute left."
+   ],
+   "v-09-18-4-12":[
+      "\n## sensation:\ngrainy,complex,irregular,discontinuous,rough\n## emotion:\nfunny,mechanical,strange,urgent,creepy,happy,interesting\n## metaphors:\njumping,animal,game,musical instruments,drums,alarm\n## usage examples:\nreminder,one minute left,warning\n",
+      "Create a discontinuous, grainy, and complex vibrotactile pattern with irregular and rough sensations that feels funny, mechanical, strange, urgent, creepy, happy, and interesting, like jumping animals in a game, musical instruments, drums, or an alarm, to serve as a reminder, to signal one minute left, or as a warning."
+   ],
+   "v-09-18-4-15":[
+      "\n## sensation:\nrough,dynamic,discontinuous,complex,short,irregular,spiky\n## emotion:\nunique,strange,calm,rhythmic,lively,annoying,mechanical\n## metaphors:\nbeep,tapping,poking\n## usage examples:\nmilestone,resume,battery low,reminder,confirmation,interval/rep,get ready,one minute left,finish,alarm\n",
+      "Design a short, spiky, and rough vibrotactile pattern with dynamic, discontinuous, complex, and irregular sensations that feels unique, strange, calm, rhythmic, lively, annoying, and mechanical, like a beep, tapping, or poking, to indicate a milestone, resume, battery low, reminder, confirmation, interval/rep, get ready, one minute left, finish, or as an alarm."
+   ],
+   "v-09-18-4-16":[
+      "\n## sensation:\nshort,spiky,discontinuous,simple\n## emotion:\nfunny,familiar,interesting\n## metaphors:\nbeep,bell,game,hearbeat,phone,frogs,animal\n## usage examples:\nconfirmation,pause,interval/rep,incoming msg,resume,cooldownwarm up/cool down,start,get ready\n",
+      "Generate a short, spiky, discontinuous, and simple vibrotactile pattern that feels funny, familiar, and interesting, like a beep, bell, game sound, heartbeat, phone notification, frogs, or an animal, to signal confirmation, pause, interval/rep, an incoming message, resume, cooldown/warm up, start, or get ready."
+   ],
+   "v-09-18-4-18":[
+      "\n## sensation:\ndiscontinuous,bumpy,dynamic,regular\n## emotion:\ncomfortable,happy,lively,interesting,unique,rhythmic\n## metaphors:\nbeep,horn,alarm,game,nature,animal,tapping\n## usage examples:\nstart,get ready,milestone,encouragement,running out of time,speed up,warning,reminder,battery low,below intended threshold,above intended threshold,pause,slow down\n",
+      "Develop a discontinuous, bumpy, dynamic, and regular vibrotactile pattern that feels comfortable, happy, lively, interesting, unique, and rhythmic, like a beep, horn, alarm, game sound, nature sound, animal, or tapping, to indicate start, get ready, a milestone, encouragement, running out of time, speed up, warning, reminder, battery low, below intended threshold, above intended threshold, pause, or slow down."
+   ],
+   "v-09-18-4-22":[
+      "\n## sensation:\nsmooth,regular,discontinuous,dynamic,ramping down,simple,soft,long\n## emotion:\nsad,calm,natural,unique,familiar,boring,predictable\n## metaphors:\nbreathing,pulsing,hearbeat\n## usage examples:\npause,get ready,battery low\n",
+      "Create a smooth, regular, discontinuous, and dynamic vibrotactile pattern that ramps down, feels simple, soft, and long, and evokes sadness, calmness, naturalness, uniqueness, familiarity, boredom, and predictability, like breathing, pulsing, or a heartbeat, to signal pause, get ready, or battery low."
+   ],
+   "v-09-18-4-56":[
+      "\n## sensation:\nlong,smooth transition,ticklish\n## emotion:\ncreepy,strange,uncomfortable,agitating\n## metaphors:\ncoming or going,alarm,sliding\n## usage examples:\nalarm,get ready\n",
+      "Generate a long, smooth-transitioning, and ticklish vibrotactile pattern that feels creepy, strange, uncomfortable, and agitating, like something coming or going, an alarm, or sliding, to signal an alarm or get ready."
+   ],
+   "v-09-23-6-24":[
+      "\n## sensation:\ncontinuous,dynamic,ramping up\n## emotion:\nannoying,mechanical,strange,creepy,urgent,sad\n## metaphors:\nanimal,engine,sliding,coming or going\n## usage examples:\nalarm,slow down,warning,cooldown\n",
+      "Design a continuous, dynamic, and ramping-up vibrotactile pattern that feels annoying, mechanical, strange, creepy, urgent, and sad, like an animal, engine, sliding, or something coming or going, to signal an alarm, slow down, a warning, or cooldown."
+   ],
+   "v-09-26-1-39":[
+      "\n## sensation:\ndiscontinuous,smooth,regular,simple,ramping up,flat,soft,grainy\n## emotion:\nsad,calm,pleasant,comfortable,strange\n## metaphors:\npulsing\n## usage examples:\nslow down,battery low,pause,get ready,warmup,cooldown\n",
+      "Craft a discontinuous, smooth, regular, simple, ramping-up, flat, soft, and grainy vibrotactile pattern that feels sad, calm, pleasant, comfortable, and strange, like pulsing, to indicate slow down, battery low, pause, get ready, warmup, or cooldown."
+   ],
+   "v-10-09-1-1":[
+      "\n## sensation:\nirregular,discontinuous,pointy,soft\n## emotion:\ncomfortable,mechanical,rhythmic,calm\n## metaphors:\ntapping,drums\n## usage examples:\nmilestone,cooldown,interval/rep,pause\n",
+      "Produce an irregular, discontinuous, pointy, and soft vibrotactile pattern that feels comfortable, mechanical, rhythmic, and calm, like tapping or drums, to signal a milestone, cooldown, interval/rep, or pause."
+   ],
+   "v-10-09-1-11":[
+      "\n## sensation:\nsmooth,discontinuous,bumpy,complex\n## emotion:\npleasant,calm,comfortable,unique,natural,rhythmic,interesting\n## metaphors:\npawing\n## usage examples:\nencouragement,reminder,milestone,above intended threshold,incoming msg,below intended threshold\n",
+      "Generate a smooth, discontinuous, bumpy, and complex vibrotactile pattern that feels pleasant, calm, comfortable, unique, natural, rhythmic, and interesting, like pawing, to indicate encouragement, a reminder, a milestone, being above intended threshold, an incoming message, or being below intended threshold."
+   ],
+   "v-10-09-1-12":[
+      "\n## sensation:\ndiscontinuous,irregular,rough\n## emotion:\ncomfortable,mechanical,lively,rhythmic,agitating\n## metaphors:\nalarm,musical instruments,game\n## usage examples:\novertime,running out of time,speed up,encouragement,above intended threshold,below intended threshold,alarm,milestone,warmup,cooldownwarm up/cool down\n",
+      "Create a discontinuous, irregular, and rough vibrotactile pattern that feels comfortable, mechanical, lively, rhythmic, and agitating, like an alarm, musical instruments, or a game sound, to signal overtime, running out of time, speed up, encouragement, being above intended threshold, being below intended threshold, an alarm, a milestone, warmup, or cooldown."
+   ],
+   "v-10-09-1-14":[
+      "\n## sensation:\ndynamic,discontinuous,long,complex,smooth\n## emotion:\nlively,unique,interesting,mechanical,comfortable,rhythmic,happy\n## metaphors:\nphone,musical instruments,drums,beep,music,singing,celebration\n## usage examples:\nencouragement,speed up,finish,alarm,milestone\n",
+      "Develop a dynamic, discontinuous, long, complex, and smooth vibrotactile pattern that feels lively, unique, interesting, mechanical, comfortable, rhythmic, and happy, like a phone, musical instruments, drums, a beep, music, singing, or a celebration, to signal encouragement, speed up, finish, an alarm, or a milestone."
+   ],
+   "v-10-09-1-16":[
+      "\n## sensation:\nramping up,dynamic,regular,discontinuous,smooth\n## emotion:\nmechanical,calm,comfortable\n## metaphors:\nengine\n## usage examples:\nbelow intended threshold,speed up,alarm,running out of time,above intended threshold\n",
+      "Design a ramping-up, dynamic, regular, discontinuous, and smooth vibrotactile pattern that feels mechanical, calm, and comfortable, like an engine, to signal below intended threshold, speed up, an alarm, running out of time, or above intended threshold."
+   ],
+   "v-10-09-1-20":[
+      "\n## sensation:\nlong,dynamic,simple,flat,smooth,ramping up,regular,continuous,soft\n## emotion:\nstrange,sad,predictable,calm\n## metaphors:\nsnoring,nature\n## usage examples:\nbattery low,slow down,below intended threshold\n",
+      "Generate a long, dynamic, simple, flat, smooth, ramping-up, regular, continuous, and soft vibration that feels strange, sad, predictable, and calm, like snoring or a nature sound, to signal battery low, slow down, or being below intended threshold."
+   ],
+   "v-10-09-1-8":[
+      "\n## sensation:\nramping up,smooth,soft,regular,long\n## emotion:\npredictable,mechanical\n## metaphors:\nbuzz,animal,celebration\n## usage examples:\nbelow intended threshold,speed up,alarm,warning,above intended threshold,running out of time,overtime,get ready,reminder\n",
+      "Create a ramping-up, smooth, soft, regular, and long vibration that feels predictable and mechanical, like a buzz, an animal sound, or a celebration, to signal below intended threshold, speed up, an alarm, a warning, above intended threshold, running out of time, overtime, get ready, or a reminder."
+   ],
+   "v-10-09-5-0":[
+      "\n## sensation:\nbumpy,rough,simple,dynamic,discontinuous,regular\n## emotion:\nurgent,mechanical,agitating,predictable\n## metaphors:\nalarm,tapping\n## usage examples:\novertime,alarm,finish,running out of time,above intended threshold,one minute left,warning\n",
+      "Design a bumpy, rough, simple, dynamic, discontinuous, and regular vibration that feels urgent, mechanical, agitating, and predictable, like an alarm or tapping, to signal overtime, an alarm, finish, running out of time, above intended threshold, one minute left, or a warning."
+   ],
+   "v-10-09-5-2":[
+      "\n## sensation:\nregular,discontinuous,bumpy\n## emotion:\nlively,energetic,attention-catching,mechanical,rhythmic,annoying\n## metaphors:\ntapping,morse code\n## usage examples:\nwarning,running out of time,speed up,alarm,above intended threshold,interval/rep,get ready,one minute left\n",
+      "Generate a regular, discontinuous, and bumpy vibration that feels lively, energetic, attention-catching, mechanical, rhythmic, and annoying, like tapping or Morse code, to signal a warning, running out of time, speed up, an alarm, being above intended threshold, an interval/rep, get ready, or one minute left."
+   ],
+   "v-10-09-5-4":[
+      "\n## sensation:\nrough,simple\n## emotion:\nmechanical,urgent,predictable,strange\n## metaphors:\nalarm,bell,electric shock\n## usage examples:\nabove intended threshold,finish,one minute left,overtime,running out of time,warmup,alarm\n",
+      "Produce a rough and simple vibration that feels mechanical, urgent, predictable, and strange, like an alarm, bell, or electric shock, to signal above intended threshold, finish, one minute left, overtime, running out of time, warmup, or an alarm."
+   ],
+   "v-10-09-5-7":[
+      "\n## sensation:\ndiscontinuous,grainy,regular,rough,irregular,short,ticklish\n## emotion:\nurgent,annoying,agitating,mechanical,fear\n## metaphors:\nelectric shock,gun,beep,game\n## usage examples:\novertime,warning,above intended threshold,speed up,finish,alarm,below intended threshold,interval/rep\n",
+      "Craft a discontinuous, grainy, regular, rough, irregular, short, and ticklish vibration that feels urgent, annoying, agitating, mechanical, and fear-inducing, like an electric shock, gun, beep, or a game sound, to signal overtime, a warning, being above intended threshold, speed up, finish, an alarm, being below intended threshold, or an interval/rep."
+   ],
+   "v-10-10-1-10":[
+      "\n## sensation:\nsmooth,regular\n## emotion:\npleasant,comfortable,calm,boring,predictable,familiar,natural,rhythmic\n## metaphors:\n\n## usage examples:\nslow down,warning,above intended threshold,halfway\n",
+      "Craft a discontinuous, grainy, regular, rough, irregular, short, and ticklish vibration that feels urgent, annoying, agitating, mechanical, and fear-inducing, like an electric shock, gun, beep, or a game sound, to signal overtime, a warning, being above intended threshold, speed up, finish, an alarm, being below intended threshold, or an interval/rep."
+   ],
+   "v-10-10-1-18":[
+      "\n## sensation:\ndiscontinuous,regular\n## emotion:\nrhythmic,lively,happy,energetic,attention-catching,unique,predictable,mechanical\n## metaphors:\nmorse code,alarm,beep,game,hearbeat,poking\n## usage examples:\nwarning,reminder,battery low,one minute left,milestone,get ready\n",
+      "Develop a discontinuous and regular vibration that feels rhythmic, lively, happy, energetic, attention-catching, unique, predictable, and mechanical, like Morse code, an alarm, a beep, a game sound, a heartbeat, or poking, to signal a warning, reminder, battery low, one minute left, a milestone, or get ready."
+   ],
+   "v-10-10-1-21":[
+      "\n## sensation:\ndiscontinuous,rough,ramping up,dynamic\n## emotion:\nagitating,urgent,annoying,uncomfortable,mechanical,unique,interesting,strange,surprising\n## metaphors:\nphone,alarm,riding\n## usage examples:\nspeed up,running out of time,overtime,finish,alarm,warning,below intended threshold,above intended threshold,interval/rep,one minute left,confirmation\n",
+      "Generate a discontinuous, rough, ramping-up, and dynamic vibration that feels agitating, urgent, annoying, uncomfortable, mechanical, unique, interesting, strange, and surprising, like a phone, alarm, or the feeling of riding something, to signal speed up, running out of time, overtime, finish, an alarm, a warning, being below intended threshold, being above intended threshold, an interval/rep, one minute left, or confirmation."
+   ],
+   "v-10-10-1-5":[
+      "\n## sensation:\nramping up,dynamic,discontinuous,smooth,regular\n## emotion:\nurgent,agitating,strange\n## metaphors:\nsliding,coming or going,alarm,game\n## usage examples:\nalarm,overtime,speed up,warmup,interval/rep,encouragement\n",
+      "Create a ramping-up, dynamic, discontinuous, smooth, and regular vibration that feels urgent, agitating, and strange, like sliding, something coming or going, an alarm, or a game sound, to signal an alarm, overtime, speed up, warmup, an interval/rep, or encouragement."
+   ],
+   "v-10-18-11-11":[
+      "\n## sensation:\nramping down,discontinuous,rough,simple,short\n## emotion:\nmechanical,urgent,angry,strange,annoying,uncomfortable,surprising\n## metaphors:\nphone,alarm,beep,game\n## usage examples:\nfinish,overtime,alarm,one minute left,above intended threshold,below intended threshold,battery low\n",
+      "Design a short, simple, rough, and discontinuous vibration that ramps down and evokes a mechanical, urgent, angry, strange, annoying, uncomfortable, and surprising feeling, similar to a phone, alarm, beep, or game sound, to signal finish, overtime, an alarm, one minute left, being above intended threshold, being below intended threshold, or battery low."
+   ],
+   "v-10-21-2-48":[
+      "\n## sensation:\ndiscontinuous,rough,grainy,dynamic,short,firm\n## emotion:\nurgent,annoying,uncomfortable,agitating,fear,angry,mechanical\n## metaphors:\nmusical instruments,drums,cymbal,explosion tapping\n## usage examples:\nalarm,running out of time,overtime,finish,interval/rep,warning\n",
+      "Craft a short, firm, discontinuous, rough, grainy, and dynamic vibration that feels urgent, annoying, uncomfortable, agitating, fear-inducing, angry, and mechanical, reminiscent of musical instruments, drums, a cymbal, an explosion, or tapping, to signal an alarm, running out of time, overtime, finish, an interval/rep, or a warning."
+   ],
+   "v-10-21-3-11":[
+      "\n## sensation:\ndiscontinuous,regular,simple,grainy,bumpy\n## emotion:\nhappy,lively,energetic,comfortable,pleasant,familiar,natural,strange\n## metaphors:\ntapping,game\n## usage examples:\nstart,one minute left,running out of time,speed up,warning,alarm,finish,milestone,resume,overtime,warmup,cooldown,confirmation\n",
+      "Create a discontinuous, regular, simple, grainy, and bumpy vibration that feels happy, lively, energetic, comfortable, pleasant, familiar, natural, and slightly strange, like tapping in a game. This pattern could be used to signal the start of something, indicate that one minute is left, or serve as a warning that time is running out. It could also be used to encourage someone to speed up, act as an alarm, mark the finish of a task, celebrate a milestone, signal a resume, indicate overtime, be part of a warmup or cooldown routine, or provide confirmation."
+   ],
+   "v-10-21-3-17":[
+      "\n## sensation:\nirregular,rough,discontinuous,complex\n## emotion:\nurgent,agitating,mechanical,unique,angry\n## metaphors:\nbuzz,alarm\n## usage examples:\novertime,interval/rep,alarm,running out of time,finish,reminder\n",
+      "Design a vibrotactile pattern that feels irregular, rough, and discontinuous, with a complex structure. This pattern should evoke a sense of urgency, agitation, and anger, with a mechanical and unique quality. It should metaphorically resemble a buzzing alarm. Use this pattern for situations such as signaling overtime, marking an interval or repetition, setting off an alarm, indicating running out of time, marking a finish, or serving as a reminder."
+   ],
+   "v-10-21-3-2":[
+      "\n## sensation:\nbumpy,discontinuous,short,regular,dynamic\n## emotion:\ninteresting,attention-catching,strange\n## metaphors:\nbeep,clock\n## usage examples:\nreminder,get ready,incoming msg,resume,milestone,warmup,one minute left,battery low,warning\n",
+      "Create a vibrotactile pattern that is bumpy, discontinuous, and short, with a regular yet dynamic rhythm. This pattern should feel interesting, attention-catching, and slightly strange. It should metaphorically resemble a beep or the ticking of a clock. Use this pattern for scenarios like sending a reminder, signaling to get ready, notifying of an incoming message, prompting to resume, marking a milestone, indicating one minute left, warning of low battery, or providing a general warning."
+   ],
+   "v-10-21-3-21":[
+      "\n## sensation:\nshort,ramping down,flat\n## emotion:\nboring,comfortable,calm\n## metaphors:\n\n## usage examples:\ninterval/rep\n",
+      "Generate a vibrotactile pattern that is short, with a ramping down sensation that ends flat. This pattern should evoke feelings of calmness, comfort, and a sense of being slightly boring. It is ideal for marking the end of an interval or repetition."
+   ],
+   "v-10-21-3-30":[
+      "\n## sensation:\nsimple,continuous,short\n## emotion:\nstrange,mechanical,annoying,uncomfortable\n## metaphors:\nbeep,buzz,electric shock,alarm\n## usage examples:\nbattery low,milestone,warmup,resume,incoming msg,warning\n",
+      "Create a vibrotactile pattern that is simple, continuous, and short. This pattern should evoke a strange, mechanical feeling that is both annoying and uncomfortable. It should metaphorically resemble a beep, buzz, electric shock, or alarm. Use this pattern for scenarios such as indicating a low battery, marking a milestone, during a warmup, prompting to resume, notifying of an incoming message, or providing a warning."
+   ],
+   "v-10-21-3-33":[
+      "\n## sensation:\nspiky,bumpy,simple,regular,short,discontinuous\n## emotion:\nlively,pleasant,comfortable,unique,interesting\n## metaphors:\ntapping,beep,poking,clock\n## usage examples:\nget ready,resume,pause,milestone,incoming msg,confirmation,warning,reminder,battery low,warmup,cooldown\n",
+      "Design a vibrotactile pattern that is spiky and bumpy, with a simple, regular rhythm that is short and discontinuous. This pattern should evoke emotions of liveliness, pleasantness, and comfort, while feeling unique and interesting. It should metaphorically resemble tapping, a beep, gentle poking, or the ticking of a clock. Use this pattern for scenarios such as signaling to get ready, prompting to resume or pause, marking a milestone, notifying of an incoming message, providing confirmation, giving a warning, sending a reminder, indicating low battery, or during a warmup or cooldown."
+   ],
+   "v-10-21-3-39":[
+      "\n## sensation:\nshort,rough,discontinuous,firm\n## emotion:\nurgent,agitating,uncomfortable,angry,mechanical,annoying,fear\n## metaphors:\nalarm,game,fail game,gun,electric shock\n## usage examples:\nwarning,above intended threshold,overtime,alarm,battery low,below intended threshold,finish,resume,pause\n",
+      "Create a vibrotactile pattern that is short, rough, and discontinuous, with a firm sensation. This pattern should evoke a strong sense of urgency, agitation, discomfort, and anger, with a mechanical, annoying, and fearful undertone. It should metaphorically resemble an alarm, the feeling of failing a game, the jolt of an electric shock, or the impact of a gun. Use this pattern for scenarios such as issuing a warning, indicating that something is above or below the intended threshold, signaling overtime, setting off an alarm, indicating low battery, marking a finish, or prompting to resume or pause."
+   ],
+   "v-10-21-3-4":[
+      "\n## sensation:\nramping up,short,discontinuous,spiky,dynamic\n## emotion:\nurgent,agitating,lively,energetic,fear,angry,uncomfortable,annoying,surprising\n## metaphors:\ntapping,jumping,musical instruments,drums,coming or going,SOS,celebration,gun,alarm,poking\n## usage examples:\nspeed up,running out of time,warning,one minute left,reminder,above intended threshold,below intended threshold,milestone,encouragement,resume,alarm\n",
+      "Design a vibrotactile pattern that ramps up quickly, with a short, discontinuous, and spiky sensation that is dynamic. This pattern should evoke a sense of urgency, agitation, and liveliness, combined with energetic, surprising, and uncomfortable feelings, also carrying undertones of fear and anger. It should metaphorically resemble tapping, jumping, the beat of musical instruments or drums, the sensation of something coming or going, an SOS signal, celebration, a gunshot, an alarm, or poking. Use this pattern for scenarios such as signaling to speed up, indicating running out of time, giving a warning, marking one minute left, sending a reminder, indicating that something is above or below the intended threshold, marking a milestone, providing encouragement, prompting to resume, or setting off an alarm."
+   ],
+   "v-10-21-3-45":[
+      "\n## sensation:\ndiscontinuous,rough,regular,complex\n## emotion:\nagitating,rhythmic,urgent,uncomfortable,annoying,mechanical,lively\n## metaphors:\nalarm,phone,musical instruments,drums,game,celebration\n## usage examples:\nfinish,overtime,running out of time,alarm,above intended threshold,below intended threshold,interval/rep,encouragement\n",
+      "Create a vibrotactile pattern that is discontinuous, rough, and regular, with a complex structure. This pattern should evoke a sense of agitation, urgency, and discomfort, while also feeling rhythmic, lively, and somewhat mechanical and annoying. It should metaphorically resemble an alarm, the vibration of a phone, the beat of musical instruments or drums, a game alert, or a celebration. Use this pattern for scenarios such as signaling a finish, indicating overtime, warning of running out of time, setting off an alarm, alerting that something is above or below the intended threshold, marking an interval or repetition, or providing encouragement."
+   ],
+   "v-10-21-3-7":[
+      "\n## sensation:\ndynamic,continuous,complex,bumpy\n## emotion:\nsurprising,unique,agitating,strange\n## metaphors:\nengine,getting close,coming & going,sliding\n## usage examples:\nalarm,warning,speed up,running out of time,finish,above intended threshold,below intended threshold,start,get ready,milestone\n",
+      "Design a vibrotactile pattern that is dynamic and continuous, with a complex, bumpy texture. This pattern should evoke emotions of surprise, uniqueness, agitation, and a sense of strangeness. It should metaphorically resemble the hum of an engine, the feeling of getting close to something, the sensation of something coming and going, or the motion of sliding. Use this pattern for scenarios such as setting an alarm, issuing a warning, signaling to speed up, indicating running out of time, marking a finish, alerting that something is above or below the intended threshold, signaling the start of something, prompting to get ready, or marking a milestone."
+   ],
+   "v-10-23-1-10":[
+      "\n## sensation:\ndiscontinuous,ramping down,ramping up,rough,dynamic,irregular,firm,long\n## emotion:\nurgent,mechanical,uncomfortable,annoying,lively,rhythmic,surprising\n## metaphors:\ncoming or going,phone,alarm,horn,beep\n## usage examples:\nalarm,overtime,get ready,running out of time\n",
+      "Create a vibrotactile pattern that is discontinuous, with ramping up and ramping down sensations that are rough, dynamic, and irregular. The pattern should be firm and long-lasting. It should evoke a sense of urgency, discomfort, and annoyance, with a mechanical feel that is lively, rhythmic, and surprising. It should metaphorically resemble something coming or going, the vibration of a phone, the blare of an alarm or horn, or a sharp beep. Use this pattern for scenarios such as setting an alarm, signaling overtime, prompting to get ready, or indicating that time is running out."
+   ],
+   "v-10-23-1-16":[
+      "\n## sensation:\ndiscontinuous,rough,short,spiky,complex,firm\n## emotion:\nannoying,urgent,agitating,uncomfortable,surprising\n## metaphors:\nphone,alarm,SOS,horn,game,beep,poking\n## usage examples:\novertime,warning,running out of time,speed up,finish,alarm,above intended threshold\n",
+      "Create a vibrotactile pattern that is discontinuous, rough, and short, with a spiky and complex texture that is firm. This pattern should evoke emotions of annoyance, urgency, agitation, and discomfort, with a surprising quality. It should metaphorically resemble the vibration of a phone, an alarm, an SOS signal, the sound of a horn, a game alert, a beep, or the sensation of poking. Use this pattern for scenarios such as signaling overtime, issuing a warning, indicating running out of time, prompting to speed up, marking a finish, setting off an alarm, or alerting that something is above the intended threshold."
+   ],
+   "v-10-23-1-21":[
+      "\n## sensation:\nrough,grainy,dynamic,continuous,ramping up,smooth,bumpy\n## emotion:\nmechanical,boring,predictable,annoying,urgent,interesting\n## metaphors:\ncoming or going,engine,snoring,something moving,something rolling,sliding\n## usage examples:\none minute left,speed up,running out of time,warning,above intended threshold,below intended threshold,battery low,milestone,halfway\n",
+      "Create a vibrotactile pattern that is rough and grainy, yet dynamic and continuous, with a sensation that ramps up while incorporating both smooth and bumpy elements. This pattern should evoke a mechanical feel that is both boring and predictable, yet annoying and urgent, with an interesting quality. It should metaphorically resemble something coming or going, the hum of an engine, the sound of snoring, the movement of something rolling, or sliding. Use this pattern for scenarios such as signaling one minute left, prompting to speed up, indicating running out of time, issuing a warning, alerting that something is above or below the intended threshold, notifying of low battery, marking a milestone, or indicating that you are halfway."
+   ],
+   "v-10-23-1-23":[
+      "\n## sensation:\ngrainy,rough,discontinuous,firm\n## emotion:\nmechanical\n## metaphors:\nengine,electric shock,snoring,coming or going,stopping,growl,chainsaw,a door closing\n## usage examples:\nfinish,interval/rep,warmup,warning\n",
+      "Create a vibrotactile pattern that is grainy and rough, with a discontinuous and firm sensation. This pattern should evoke a mechanical feeling. It should metaphorically resemble the sound or sensation of an engine, an electric shock, snoring, something coming or going, stopping, a growl, a chainsaw, or a door closing. Use this pattern for scenarios such as marking the finish, signaling an interval or repetition, during a warmup, or issuing a warning."
+   ],
+   "v-10-23-1-24":[
+      "\n## sensation:\nrough,grainy,dynamic,complex,ramping up,continuous,ticklish\n## emotion:\nangry,mechanical,agitating,urgent,annoying,uncomfortable,fear,interesting,unique,funny,surprising\n## metaphors:\nengine,gun,buzz,animal,coming or going,celebration\n## usage examples:\nrunning out of time,finish,speed up,alarm,get ready,encouragement\n",
+      "Create a vibrotactile pattern that is rough and grainy, with a dynamic, complex, and continuous sensation that ramps up while feeling ticklish. This pattern should evoke a range of emotions including anger, mechanical discomfort, agitation, urgency, annoyance, and fear, while also being interesting, unique, and surprisingly funny. It should metaphorically resemble the hum of an engine, the jolt of a gun, a buzzing sound, the presence of an animal, the sensation of something coming or going, or a celebration. Use this pattern for scenarios such as indicating running out of time, marking the finish, prompting to speed up, setting off an alarm, signaling to get ready, or providing encouragement."
+   ],
+   "v-10-28-7-22":[
+      "\n## sensation:\ncomplex,discontinuous,dynamic,irregular,long\n## emotion:\nurgent,mechanical,rhythmic,agitating,unique,fear,interesting\n## metaphors:\nSOS,alarm,beep,tapping,drums\n## usage examples:\nrunning out of time,overtime,finish,speed up,above intended threshold,alarm,get ready,incoming msg\n",
+      "Create a vibrotactile pattern that is complex, discontinuous, and dynamic with an irregular rhythm and a long duration. This pattern should evoke emotions of urgency, mechanical sensation, and fear, while being rhythmic, agitating, unique, and interesting. It should metaphorically resemble an SOS signal, an alarm, a beep, tapping, or the beat of drums. Use this pattern for scenarios such as indicating running out of time, signaling overtime, marking a finish, prompting to speed up, alerting that something is above the intended threshold, setting off an alarm, signaling to get ready, or notifying of an incoming message."
+   ],
+   "v-10-28-7-23":[
+      "\n## sensation:\nrough,grainy,discontinuous,irregular\n## emotion:\nannoying,urgent,agitating,uncomfortable,angry,mechanical,rhythmic,surprising\n## metaphors:\nalarm,tapping\n## usage examples:\nalarm,running out of time,overtime,finish,one minute left,warmup\n",
+      "Create a vibrotactile pattern that is rough and grainy, with a discontinuous and irregular texture. This pattern should evoke feelings of annoyance, urgency, agitation, and discomfort, while also conveying anger, a mechanical quality, rhythmicity, and surprise. It should metaphorically resemble an alarm or tapping. Use this pattern for scenarios such as setting off an alarm, indicating running out of time, signaling overtime, marking the finish, reminding of one minute left, or during a warmup."
+   ],
+   "v-10-28-7-26":[
+      "\n## sensation:\nirregular,dynamic,spiky,rough,discontinuous\n## emotion:\nstrange,surprising,unique\n## metaphors:\npawing,animal,nature\n## usage examples:\nspeed up,encouragement\n",
+      "Create a vibrotactile pattern that is irregular and dynamic, with a spiky, rough, and discontinuous texture. This pattern should evoke a sense of strangeness, surprise, and uniqueness. It should metaphorically resemble the sensation of an animal pawing or a natural, irregular movement. Use this pattern for scenarios such as prompting to speed up or providing encouragement."
+   ],
+   "v-10-28-7-29":[
+      "\n## sensation:\nirregular,grainy,bumpy\n## emotion:\nmechanical,annoying,strange,predictable\n## metaphors:\nriding,coming or going,engine\n## usage examples:\nwarning,alarm,warmup,cooldown\n",
+      "Create a vibrotactile pattern that is irregular, grainy, and bumpy. This pattern should evoke a mechanical feeling that is annoying and strange, yet predictable. It should metaphorically resemble the sensation of riding, something coming or going, or the hum of an engine. Use this pattern for scenarios such as issuing a warning, setting off an alarm, during a warmup, or a cooldown."
+   ],
+   "v-10-28-7-31":[
+      "\n## sensation:\nregular,soft,discontinuous,simple,grainy,flat\n## emotion:\nfamiliar,calm,boring,predictable,pleasant,comfortable,rhythmic,unique\n## metaphors:\nwalking,tapping,clock\n## usage examples:\nbattery low,slow down,warning,reminder\n",
+      "Create a vibrotactile pattern that is regular, soft, and discontinuous, with a simple, grainy, and flat texture. This pattern should evoke a sense of familiarity, calmness, and comfort, while also being somewhat boring and predictable. It should feel pleasant and rhythmic, yet unique. Metaphorically, it should resemble the sensation of walking, tapping, or the ticking of a clock. Use this pattern for scenarios such as indicating low battery, signaling to slow down, issuing a warning, or sending a reminder."
+   ],
+   "v-10-28-7-33":[
+      "\n## sensation:\nramping down,discontinuous,irregular,dynamic,grainy\n## emotion:\nstrange,comfortable,lively,mechanical\n## metaphors:\nbuzz,engine\n## usage examples:\nspeed up,above intended threshold,encouragement,running out of time\n",
+      "Create a vibrotactile pattern that ramps down dynamically, with a discontinuous, irregular, and grainy texture. This pattern should evoke feelings of strangeness, comfort, and liveliness, while also conveying a mechanical quality. It should metaphorically resemble a buzz or the hum of an engine. Use this pattern for scenarios such as prompting to speed up, indicating that something is above the intended threshold, providing encouragement, or signaling that time is running out."
+   ],
+   "v-10-28-7-35":[
+      "\n## sensation:\nsimple,continuous,regular,ramping down,smooth,long,flat,soft\n## emotion:\nsad,comfortable,familiar,calm\n## metaphors:\nbuzz,animal,fog horn\n## usage examples:\nfinish,interval/rep,overtime,get ready,congratulations,reminder\n",
+      "Generate a vibration from the following terms. ## sensation: simple,continuous,regular,ramping down,smooth,long,flat,soft ## emotion: sad,comfortable,familiar,calm ## metaphors: buzz,animal,fog horn ## usage examples: finish,interval/rep,overtime,get ready,congratulations,reminder"
+   ],
+   "v-10-28-7-36":[
+      "\n## sensation:\ngrainy,simple,flat,regular,continuous,long,rough\n## emotion:\nagitating,urgent,boring,predictable,annoying,uncomfortable,mechanical,fear\n## metaphors:\nbuzz,electric shock,engine,snoring,phone,animal\n## usage examples:\novertime,finish,alarm,get ready,incoming msg\n",
+      "Generate a vibration from the following terms: ## sensation: grainy,simple,flat,regular,continuous,long,rough ## emotion: agitating,urgent,boring,predictable,annoying,uncomfortable,mechanical,fear ## metaphors: buzz,electric shock,engine,snoring,phone,animal ## usage examples: overtime,finish,alarm,get ready,incoming msg"
+   ],
+   "v-10-29-4-20":[
+      "\n## sensation:\nramping up,ramping down,grainy,regular\n## emotion:\nuncomfortable,mechanical,comfortable,calm,pleasant\n## metaphors:\nsnoring,engine,coming or going,breathing\n## usage examples:\n\n",
+      "Cenerate a vibrotactile patter from the following terms: ## sensation: ramping up,ramping down,grainy,regular ## emotion: uncomfortable,mechanical,comfortable,calm,pleasant ## metaphors: snoring,engine,coming or going,breathing ## usage examples:"
+   ],
+   "v-10-29-4-22":[
+      "\n## sensation:\ndiscontinuous,complex,dynamic,irregular,ramping up,smooth\n## emotion:\nsurprising,interesting,unique,strange,mechanical,comfortable,lively\n## metaphors:\nengine,game\n## usage examples:\nspeed up,below intended threshold,alarm,above intended threshold\n",
+      "Cenerate a vibrotactile patter from the following terms: ## sensation: discontinuous,complex,dynamic,irregular,ramping up,smooth ## emotion: surprising,interesting,unique,strange,mechanical,comfortable,lively ## metaphors: engine,game ## usage examples: speed up,below intended threshold,alarm,above intended threshold"
+   ]
+}
