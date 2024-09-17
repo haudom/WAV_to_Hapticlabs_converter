@@ -51,7 +51,7 @@ def lowPassFilter(audio_arr, sr):
 
 
 ##############################################################################
-# Findest stellen mit einer längeren Folge von niedrigen Pegeln (Pausen)
+# Findet stellen mit einer längeren Folge von niedrigen Pegeln (Pausen)
 ##############################################################################
 def findBreaks(audio_arr, sr):
   index = -1
@@ -169,7 +169,7 @@ def splitAudioArrAtBreaks(audio_arr, breaksList):
 
 
 #############################################################################	
-# Vereinfachen von Graphen zu linearen Darstellungen
+# Vereinfachen von Graphen zu linearen Darstellungen (für Fading)
 # Parameter: data: Daten welche verifacht werden [Zeitpunkte, Werte]/ [x,y], window_size: "Auflösung" der vereinfachung (Je größer desto gröber die Vereinfachung)
 #            time_tolerance: Zeitwerte innherhalb werden zu einem Zeitwert zusammengefasst
 #            value_tolerance: Aufeinanderfolgende Werte innerhalb der Toleranz werden als horizontale Gerade interpretiert/ zusammengefasst.
@@ -487,7 +487,7 @@ def createBlocksFromCutIndices(cut_indices, start, stop):
   return blocks
 
 ###############################################################################
-# Signal bei 10% Amplitudenänderung teilen
+# Signal bei 20% Amplitudenänderung teilen
 ###############################################################################
 def simpleSplitByAmplitude(audio_arr, amplitudes, sr, start = 0, stop = None):
   """
@@ -529,7 +529,7 @@ def simpleSplitByAmplitude(audio_arr, amplitudes, sr, start = 0, stop = None):
   amplitudes = amplitudes[fisrstAmplitudeIndex:lastAmplitudeIndex+1]
 
   minBlockSize = sr//40 # meindestens eine 40HZ Periode bzw. 25ms
-  threshold = 0.1 # 10% amplitudenänderung führen zu neuen Block
+  threshold = 0.2 # 20% amplitudenänderung führen zu neuen Block
   reference_amplitude = amplitudes[0]
   cut_indices = []
   #finde stellen an den das signal geteilt wird
@@ -587,9 +587,9 @@ def simpleBlockByAmplitude(audio_arr, amplitudes, sr,start = 0, stop = None):
 # Funktion zur dynamischen Frequenztoleranz bestimmung
 ###############################################################################
 def dynamicFrequenceyTolerance(frequencey):
-  deafaultToleranceValue = 20 #Standardtolleranz 40HZ Tolleranz
-  dynamicToleraceStart = 200 #Beginn der Linearen Tolleranz bei 200HZ
-  dynamicTileranceEndValue = 200 #Endtollerzant bei 1000HZ = 400HZ Tolleranz
+  deafaultToleranceValue = 8 #Standardtolleranz 8HZ Tolleranz
+  dynamicToleraceStart = 11 #Beginn der Linearen Tolleranz bei 11HZ
+  dynamicTileranceEndValue = 900 #Endtollerzant bei 1000HZ = 900HZ Tolleranz (Hochgerechnet aus Merchel und Altinsoy 2020)
   m = (dynamicTileranceEndValue - deafaultToleranceValue) / (1000 - dynamicToleraceStart)
 
   #Standarttolleranz

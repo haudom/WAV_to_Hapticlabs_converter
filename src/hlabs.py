@@ -70,15 +70,15 @@ class HlabsBlock:
         if self.type == HlabsType.BREAK:
             block["type"] = "p"
             block["data"] = {
-                "dur" : round(self.duration,2),
+                "dur" : (int)(round(self.duration,0)),
             }
         if self.type == HlabsType.SINUS:
             block["type"] = "v"
             block["data"] = {
-                "amp" : round(self.amplitude.item(),3),
-                "freq" : round(self.frequency.item(),1),
+                "amp" : round(self.amplitude.item(),2), #Amplitude in 100 Stufen von 0 bis 1
+                "freq" : (int)(round(self.frequency.item(),0)),
                 "form" : "sine",
-                "dur" : round(self.duration,2),
+                "dur" : (int)(round(self.duration,0)),
                 
             }
         return block

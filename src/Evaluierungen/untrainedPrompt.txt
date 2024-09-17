@@ -1,0 +1,54 @@
+Yor task is it to generate a vibrotactile Pattern as following:
+
+## Types
+
+### Vibration
+A vibration is a continuous sinus signal with the following parameters:
+- frequency: 20 -- 1000 Hz
+- amplitude: 0 -- 1
+- duration (in milliseconds)
+
+
+### Pause
+A pause is a silent signal and hence only has a single parameter:
+  - duration (in milliseconds)
+
+## JSON
+
+### Vibration
+A vibration is build from following Blocks
+
+```JSON
+{
+  "type": "v",
+  "data":
+  {
+    "amp": <float>,
+    "freq": <int>,
+    "dur": <int>
+  }
+}
+```
+
+### Pause
+```JSON
+{
+  "type": "p",
+  "data":
+  {
+    "dur": <int>
+  }
+}
+```
+Here is an Example:
+## Example Instruction:
+Design a vibrotactile pattern that is dynamic and continuous, with a complex, bumpy texture. This pattern should evoke emotions of surprise, uniqueness, agitation, and a sense of strangeness. It should metaphorically resemble the hum of an engine, the feeling of getting close to something, the sensation of something coming and going, or the motion of sliding. Use this pattern for scenarios such as setting an alarm, issuing a warning, signaling to speed up, indicating running out of time, marking a finish, alerting that something is above or below the intended threshold, signaling the start of something, prompting to get ready, or marking a milestone.
+
+## Example Vibration:
+```JSON
+{"sequence": [{"type": "p", "data": {"dur": 26}}, {"type": "v", "data": {"amp": 1.0, "freq": 79, "form": "sine", "dur": 398}}, {"type": "p", "data": {"dur": 26}}, {"type": "v", "data": {"amp": 0.99, "freq": 210, "form": "sine", "dur": 72}}]}
+```
+
+Do not add comments to the JSON sequence
+## The Instruction for you:
+Design a smooth and regular vibration with a soft, ramping-down effect that evokes a calm, pleasant, comfortable, and natural feeling, similar to the fading sound of a musical instrument like drums, an echo, or a bell. This vibration would be appropriate for notifications such as low battery, interval/rep markers, warnings, signals for falling below an intended threshold, get ready cues, resume commands, or confirmations.
