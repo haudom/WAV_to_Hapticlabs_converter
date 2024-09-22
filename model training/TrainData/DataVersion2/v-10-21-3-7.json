@@ -1,0 +1,1 @@
+{"sequence": [{"type": "p", "data": {"dur": 26}}, {"type": "v", "data": {"amp": 1.0, "freq": 79, "form": "sine", "dur": 398}}, {"type": "p", "data": {"dur": 26}}, {"type": "v", "data": {"amp": 0.99, "freq": 210, "form": "sine", "dur": 72}}]}
